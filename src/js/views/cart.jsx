@@ -14,7 +14,7 @@ export class Cart extends React.Component {
 						<i className="fa fa-shopping-cart" aria-hidden="true" />
 						Shipping cart
 						<a
-							href=""
+							href="http://google.com">
 							className="btn btn-outline-info btn-sm pull-right">
 							Continiu shopping
 						</a>
@@ -42,7 +42,7 @@ export class Cart extends React.Component {
 							<div className="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
 								<div
 									className="col-3 col-sm-3 col-md-6 text-md-right"
-									style="padding-top: 5px">
+									style={{ paddingTop: "5px" }}>
 									<h6>
 										<strong>
 											25.00{" "}
@@ -110,7 +110,8 @@ export class Cart extends React.Component {
 							<div className="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
 								<div
 									className="col-3 col-sm-3 col-md-6 text-md-right"
-									style="padding-top: 5px">
+
+									style={{ paddingTop: "5px" }}>
 									<h6>
 										<strong>
 											25.00{" "}
@@ -185,11 +186,15 @@ export class Cart extends React.Component {
 								</div>
 							</div>
 						</div>
-						<div className="pull-right" style="margin: 10px">
+
+						<div className="pull-right" style={{ margin: "10px" }}>
 							<a href="" className="btn btn-success pull-right">
 								Checkout
 							</a>
-							<div className="pull-right" style="margin: 5px">
+							<div
+								className="pull-right"
+								style={{ margin: "5px" }}>
+
 								Total price: <b>50.00€</b>
 							</div>
 						</div>
