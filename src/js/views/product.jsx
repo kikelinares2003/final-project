@@ -8,10 +8,7 @@ export class Product extends React.Component {
 	render() {
 		return (
 			<div className="text-center mt-5">
-				
-			
-					<img src={rigoImage} />
-				
+				<img src={rigoImage} />
 			</div>
 		);
 	}
