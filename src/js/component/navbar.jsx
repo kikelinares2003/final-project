@@ -1,35 +1,52 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Home } from "./views/landing.jsx";
-import { Cart } from "./views/cart.jsx";
-import { Blog } from "./views/blog.jsx";
-import { Product } from "./views/product.jsx";
+import { Home } from "./src/js/views/landing.jsx";
+import { Cart } from "./src/js/views/cart.jsx";
+import { Blog } from "./src/js/views/blog.jsx";
+import { Product } from "./src/js/views/product.jsx";
 
 export class Navbar extends React.Component {
 	render() {
 		return (
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="#">Navbar</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+			<nav className="navbar navbar-expand-lg navbar-light bg-light">
+				<a className="navbar-brand" href="#">
+					Navbar
+				</a>
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span className="navbar-toggler-icon" />
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item active">
-							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				<div className="collapse navbar-collapse" id="navbarNav">
+					<ul className="navbar-nav">
+						<li className="nav-item active">
+							<a className="nav-link" href={Home}>
+								Home <span className="sr-only">(current)</span>
+							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Features</a>
+						<li className="nav-item">
+							<a className="nav-link" href={Blog}>
+								Blog
+							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Pricing</a>
+						<li className="nav-item">
+							<a className="nav-link" href={Cart}>
+								Cart
+							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled" href="#">Disabled</a>
+						<li className="nav-item">
+							<a className="nav-link" href={Product}>
+								Product
+							</a>
 						</li>
 					</ul>
 				</div>
-			</nav>	
+			</nav>
 		);
 	}
 }

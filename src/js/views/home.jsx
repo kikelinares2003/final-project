@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import rigoImage from "../../img/rigo-baby.jpg";
+import Navbar from "./src/js/component/functional/navbar.jsx";
+import Footer from "./src/js/component/functional/footer.jsx";
+
 import "../../styles/home.css";
 
 export class Home extends React.Component {
