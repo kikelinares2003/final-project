@@ -13,9 +13,10 @@ export class Cart extends React.Component {
 					<div className="card-header bg-dark text-light">
 						<i className="fa fa-shopping-cart" aria-hidden="true" />
 						Shipping cart
-						<a href="http://google.com">
+						<a
+							href="http://google.com"
 							className="btn btn-outline-info btn-sm pull-right">
-							Continiu shopping
+							Continue shopping
 						</a>
 						<div className="clearfix" />
 					</div>
