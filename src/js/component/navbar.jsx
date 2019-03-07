@@ -39,7 +39,7 @@ export class Navbar extends React.Component {
 					</li>
 					<li className="nav-item">
 						<NavLink
-							to="/"
+							to="/blog"
 							className="header-item"
 							activeClassName="active">
 							Blog
