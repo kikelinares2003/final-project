@@ -14,7 +14,7 @@ export class Cart extends React.Component {
 						<i className="fa fa-shopping-cart" aria-hidden="true" />
 						Shipping cart
 						<a
-							href=""
+							href="http://google.com"
 							className="btn btn-outline-info btn-sm pull-right">
 							Continiu shopping
 						</a>
