@@ -13,8 +13,7 @@ export class Cart extends React.Component {
 					<div className="card-header bg-dark text-light">
 						<i className="fa fa-shopping-cart" aria-hidden="true" />
 						Shipping cart
-						<a
-							href="http://google.com"
+						<a href="http://google.com">
 							className="btn btn-outline-info btn-sm pull-right">
 							Continiu shopping
 						</a>
@@ -185,6 +184,7 @@ export class Cart extends React.Component {
 								</div>
 							</div>
 						</div>
+
 						<div className="pull-right" style={{ margin: "10px" }}>
 							<a href="" className="btn btn-success pull-right">
 								Checkout
