@@ -1,5 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Home } from "./views/landing.jsx";
+import { Cart } from "./views/cart.jsx";
+import { Blog } from "./views/blog.jsx";
+import { Product } from "./views/product.jsx";
 
 export class Navbar extends React.Component {
 	render() {
