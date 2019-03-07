@@ -9,7 +9,7 @@ export class Cart extends React.Component {
 	render() {
 		return (
 			<h1>Cart Page - Enrique</h1>
-		/*	<div className="container">
+			/*	<div className="container">
 				<ul className="list-group">
 					<Context.Consumer>
 						{({ store, actions }) => {
