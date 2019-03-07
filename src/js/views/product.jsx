@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Navbar from "./src/js/component/functional/navbar.jsx";
-import Footer from "./src/js/component/functional/footer.jsx";
+//import Navbar from "../component/navbar.jsx";
+//import Footer from "./src/js/component/functional/footer.jsx";
 import "../../styles/product.scss";
 
 export class Product extends React.Component {

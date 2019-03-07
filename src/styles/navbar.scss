@@ -1,0 +1,29 @@
+$active-color: #0072ff;
+$nav-border-color: #CCC;
+$light-gray: #777;
+
+nav.navbar {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  border-bottom: 1px solid $nav-border-color;
+  box-shadow: 1px 1px 3px $nav-border-color;
+
+  .header-item {
+    color: $light-gray;
+    padding: 0.85rem 2rem;
+    &.active {
+      color: $active-color;
+      font-weight: bold;
+      border-bottom: 2px solid $active-color;
+    }
+  }
+
+  a {
+    color: $light-gray;
+    text-decoration: none;
+    &:hover {
+      color: $active-color;
+    }
+  }
+}
