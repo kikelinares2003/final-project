@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/functional/scrollToTop.jsx";
 
-import { Home } from "./views/landing.jsx";
+import { Landing } from "./views/landing.jsx";
+
 import { Cart } from "./views/cart.jsx";
 import { Blog } from "./views/blog.jsx";
 import { Product } from "./views/product.jsx";
@@ -19,7 +20,7 @@ export class Layout extends React.Component {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/" component={Home} />
+						<Route exact path="/" component={Landing} />
 						<Route exact path="/cart" component={Cart} />
 						<Route path="/blog" component={Blog} />
 						<Route path="/product" component={Product} />
