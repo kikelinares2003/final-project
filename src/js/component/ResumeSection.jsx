@@ -12,7 +12,7 @@ const ResumeSection = () => {
 			<div className="content-section-a">
 				<div className="container">
 					<div className="row">
-						<div className="col-lg-5 col-sm-6">
+						<div className="col-lg-5 col-lg-offset-2 col-sm-6">
 							<hr className="section-heading-spacer" />
 							<div className="clearfix" />
 							<h2 className="section-heading">
@@ -36,7 +36,7 @@ const ResumeSection = () => {
 						</div>
 						<div className="col-lg-5 col-lg-offset-2 col-sm-6">
 							<img
-								className="img-responsive"
+								className="img-fluid"
 								src={resumeImg}
 								alt="generic resume"
 							/>

@@ -40,11 +40,7 @@ const GraphicSection = () => {
 							</p>
 						</div>
 						<div className="col-lg-5 col-sm-pull-6  col-sm-6">
-							<img
-								className="img-responsive"
-								src={capeImg}
-								alt=""
-							/>
+							<img className="img-fluid" src={capeImg} alt="" />
 						</div>
 					</div>
 				</div>
