@@ -33,6 +33,6 @@ export const Footer = () => {
 let menu = [
 	{ label: "Home", url: "/landing" },
 	{ label: "Cart", url: "/cart" },
-	{ label: "Products", url: "/product" },
+	{ label: "Product", url: "/product" },
 	{ label: "Blog", url: "/blog" }
 ];
