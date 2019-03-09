@@ -1,38 +1,38 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-
-//style sheet
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "../../styles/footer.scss";
 
-export class Footer extends React.Component {
-	render() {
-		return (
-			<section id="footer">
-				<div className="container">
-					<div className="row text-center text-xs-center text-sm-left text-md-left">
-						<div className="col-xs-12 col-sm-4 col-md-4">
-							<ul className="list-unstyled list-inline quick-links">
-								<li className="list-inline-item">
-									<a href="javascript:void();">Home</a>
-								</li>
-								<li className="list-inline-item">
-									<a href="javascript:void();">About</a>
-								</li>
-								<li className="list-inline-item">
-									<a href="javascript:void();">Contact Us</a>
-								</li>
-								<li className="list-inline-item">
-									<a href="javascript:void();">Blog</a>
-								</li>
-								<li className="list-inline-item">
-									<a href="javascript:void();">Cart</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-		);
-	}
-}
+/**
+ *  Here I declare my component as an arrow function
+ */
+
+export const Footer = () => {
+	//I have to loop all the items and convert them into LIs
+	const items = menu.map((item, index) => (
+		<li className="nav-item" key={index}>
+			<a className="nav-link" href={item.url}>
+				{item.label}
+			</a>
+		</li>
+	));
+
+	//this methods says how the NavBar should look like in HTML
+	return (
+		<footer className="footer">
+			<div className="container">
+				{/* here I pass the array of LIs into the UL */}
+				<ul className="nav justify-content-end">{items}</ul>
+			</div>
+		</footer>
+	);
+};
+
+// declare a JS array with the menu items that you want
+
+let menu = [
+	{ label: "Home", url: "/landing" },
+	{ label: "Cart", url: "/cart" },
+	{ label: "Products", url: "/product" },
+	{ label: "Blog", url: "/blog" }
+];
