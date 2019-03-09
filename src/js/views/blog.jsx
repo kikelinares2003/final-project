@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export class Blog extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="text-center">
 				<div className="jumbotron jumbotron-fluid">
 					<div className="container">
 						<h1 className="display-4">#LearnToCode</h1>
@@ -14,7 +14,7 @@ export class Blog extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div className="card text-center">
+				<div className="card text-center w-50 mx-auto">
 					<img
 						className="card-img-top"
 						src="https://via.placeholder.com/350x150"

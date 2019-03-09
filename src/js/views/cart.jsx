@@ -10,12 +10,19 @@ export class Cart extends React.Component {
 		return (
 			<div className="container">
 				<div className="card shopping-cart">
-					<div className="card-header bg-dark text-light paddingRight:50%">
-						<i className="fa fa-shopping-cart" aria-hidden="true" />
-						Shopping cart
+					<div className="card-header bg-dark text-light float-right ">
+						<i
+							//id="bttnCtxt"
+							//style={{ marginRight: 1300 }}
+							className="fa fa-shopping-cart"
+							aria-hidden="true"
+							margin-
+						/>
+
 						<a
+							id="bttnCtxt"
 							href="http://google.com"
-							className="btn btn-outline-info btn-sm pull-right marginLeft: 500px">
+							className="btn btn-outline-info btn-sm pull-right">
 							Continue shopping
 						</a>
 						<div /*className="clearfix"*/ />
