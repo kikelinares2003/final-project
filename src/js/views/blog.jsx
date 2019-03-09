@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BlogCard from "../component/blogcards.jsx";
 
 export class Blog extends React.Component {
 	render() {
 		return (
-			<div className="text-center">
-				<div className="jumbotron jumbotron-fluid">
+			<div>
+				<div className="jumbotron jumbotron-fluid text-center">
 					<div className="container">
 						<h1 className="display-4">#LearnToCode</h1>
 						<p className="lead">
@@ -14,23 +15,40 @@ export class Blog extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div className="card text-center w-50 mx-auto">
-					<img
-						className="card-img-top"
-						src="https://via.placeholder.com/350x150"
-						alt="Card image cap"
-					/>
-					<div className="card-body">
-						<h5 className="card-title">Blog Post name</h5>
-						<p className="card-text">
-							With supporting text below as a natural lead-in to
-							additional content.lorem ipsum,.
-						</p>
-						<button className="btn btn-primary">
-							check out the full story
-						</button>
+				<div className="container">
+					<div className="row hidden-md-up py-5 mx-auto">
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
 					</div>
-					<div className="card-footer text-muted">6 days ago</div>
+					<div className="row hidden-md-up py-5 mx-auto">
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+					</div>
+					<div className="row hidden-md-up py-5 mx-auto">
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+						<div className="col-md-4">
+							<BlogCard />
+						</div>
+					</div>
 				</div>
 			</div>
 		);
