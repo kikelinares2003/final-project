@@ -44,7 +44,11 @@ export class Cart extends React.Component {
 												<div className="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
 													<h4 className="product-name">
 														<strong>
-															{item.productName}
+															<Link to="/product">
+																{
+																	item.productName
+																}
+															</Link>
 														</strong>
 													</h4>
 													<h4>
