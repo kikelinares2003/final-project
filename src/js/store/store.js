@@ -46,6 +46,29 @@ const getState = ({ getStore, setStore }) => {
 					para:
 						"I also have extensive Photoshop and graphic design experience! Please visit my graphic examples page and check out my style. I created most of these for new and used auto dealers when I worked with Autotrader.com"
 				}
+			],
+			cartStore: [
+				{
+					productName: "Part number 1",
+					productImage:
+						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
+					productPrice: "25",
+					productDescription: "Short description of item 1"
+				},
+				{
+					productName: "Part number 2",
+					productImage:
+						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
+					productPrice: "100",
+					productDescription: "Short description of item 2"
+				},
+				{
+					productName: "Part number 3",
+					productImage:
+						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
+					productPrice: "47.99",
+					productDescription: "Short description of item 3"
+				}
 			]
 		},
 		actions: {
