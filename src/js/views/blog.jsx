@@ -15,40 +15,11 @@ export class Blog extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div className="container">
-					<div className="row hidden-md-up py-5 mx-auto">
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-					</div>
-					<div className="row hidden-md-up py-5 mx-auto">
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-					</div>
-					<div className="row hidden-md-up py-5 mx-auto">
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-						<div className="col-md-4">
-							<BlogCard />
-						</div>
-					</div>
+				<div>
+					<BlogCard />
+					<BlogCard />
+					<BlogCard />
+					<BlogCard />
 				</div>
 			</div>
 		);

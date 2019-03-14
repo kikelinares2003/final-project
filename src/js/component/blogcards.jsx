@@ -1,29 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "../../styles/blogstyle.css";
 export default function BlogCard(props) {
 	return (
 		<div>
-			<div className="card text-center rounded-0">
-				<img
-					className="card-img-top rounded-0"
-					src="https://via.placeholder.com/350x150"
-					alt="Card image cap"
-				/>
-				<div className="card-body">
-					<h5 className="card-title">Blog Post name</h5>
-					<p className="card-text">
-						Lorem ninja ipsum dolor sit amet, consectetuer
-						adipiscing elit, sed diam nonummy nibh euismod tincidunt
-						ut laoreet dolore magna aliquam erat volutpat. Ut ninja
-						wisi enim ad minim veniam, quis nostrud exerci tation
-						ullamcorper suscipit ninja lobortis nisl ut aliquip ex
-						ea commodo consequat. Duis ninja autem vel eum iriure
-						dolor in hendrerit in vulputate ninja velit esse .
+			<div
+				className="jumbotron jumbotron-fluid"
+				style={{ backgroundColor: "white" }}>
+				<div className="container">
+					<div className="img-container float-right" />
+					<p className="font-weight-bold">#LearnToCode</p>
+					<p className="text-muted">
+						This is a modified jumbotron that occupies the entire
+						horizontal space of its parent.
 					</p>
-					<Link to="/">read more</Link>
+
+					<p className="font-weight-normal">Author name</p>
+					<p className="text-muted">
+						Publish Date star button to fav
+					</p>
 				</div>
-				<div className="card-footer text-muted">6 days ago</div>
 			</div>
 		</div>
 	);
