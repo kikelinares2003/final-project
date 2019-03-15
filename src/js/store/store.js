@@ -17,64 +17,28 @@ const getState = ({ getStore, setStore }) => {
 				{
 					title: "BLOG",
 					url: "https://react-router-kaceydawson.c9users.io/blog",
-					img:
-						"https://react-router-kaceydawson.c9users.io/resume.jpg",
+					img: "http://kaceydawson.com/img/resume.jpg",
 					para:
 						"Thank you for taking a minute to go over my resume. I have 15 years developing web pages and creating user interfaces. Please take a minute to go over my extensive web development and corporate experience."
 				},
 				{
 					title: "PRODUCTS",
 					url: "https://react-router-kaceydawson.c9users.io/product",
-					img:
-						"https://react-router-kaceydawson.c9users.io/cape_inView.jpg",
-					para:
-						"I also have extensive Photoshop and graphic design experience! Please visit my graphic examples page and check out my style. I created most of these for new and used auto dealers when I worked with Autotrader.com"
-				},
-				{
-					title: "BLOG 2",
-					url: "https://react-router-kaceydawson.c9users.io/blog",
-					img:
-						"https://react-router-kaceydawson.c9users.io/resume.jpg",
-					para:
-						"Thank you for taking a minute to go over my resume. I have 15 years developing web pages and creating user interfaces. Please take a minute to go over my extensive web development and corporate experience."
-				},
-				{
-					title: "PRODUCTS 2",
-					url: "https://react-router-kaceydawson.c9users.io/product",
-					img:
-						"https://react-router-kaceydawson.c9users.io/cape_inView.jpg",
+					img: "http://kaceydawson.com/img/cape_inView.jpg",
 					para:
 						"I also have extensive Photoshop and graphic design experience! Please visit my graphic examples page and check out my style. I created most of these for new and used auto dealers when I worked with Autotrader.com"
 				},
 				{
 					title: "BLOG",
 					url: "https://react-router-kaceydawson.c9users.io/blog",
-					img:
-						"https://react-router-kaceydawson.c9users.io/resume.jpg",
+					img: "http://kaceydawson.com/img/resume.jpg",
 					para:
 						"Thank you for taking a minute to go over my resume. I have 15 years developing web pages and creating user interfaces. Please take a minute to go over my extensive web development and corporate experience."
 				},
 				{
 					title: "PRODUCTS",
 					url: "https://react-router-kaceydawson.c9users.io/product",
-					img:
-						"https://react-router-kaceydawson.c9users.io/cape_inView.jpg",
-					para:
-						"I also have extensive Photoshop and graphic design experience! Please visit my graphic examples page and check out my style. I created most of these for new and used auto dealers when I worked with Autotrader.com"
-				},
-				{
-					title: "BLOG 2",
-					url: "https://react-router-kaceydawson.c9users.io/blog",
-					img:
-						"https://react-router-kaceydawson.c9users.io/resume.jpg",
-					para:
-						"Thank you for taking a minute to go over my resume. I have 15 years developing web pages and creating user interfaces. Please take a minute to go over my extensive web development and corporate experience."
-				},
-				{
-					title: "PRODUCTS 2",
-					url: "https://react-router-kaceydawson.c9users.io/product",
-					img:
-						"https://react-router-kaceydawson.c9users.io/cape_inView.jpg",
+					img: "http://kaceydawson.com/img/cape_inView.jpg",
 					para:
 						"I also have extensive Photoshop and graphic design experience! Please visit my graphic examples page and check out my style. I created most of these for new and used auto dealers when I worked with Autotrader.com"
 				}
@@ -120,6 +84,7 @@ const getState = ({ getStore, setStore }) => {
 
 				setStore({ demo: demo });
 			},
+
 			setQty: (val, i) => {
 				const store = getStore();
 				store.cartStore[i].qty = val.target.value;
@@ -133,6 +98,27 @@ const getState = ({ getStore, setStore }) => {
 					total = total + elem[i].productPrice * elem[i].qty;
 				}
 				return total;
+			},
+
+			deleteSection: index => {
+				//get the store
+				const store = getStore();
+
+				//we have to loop the entire demo array to look for the respective index
+				//and change its color
+				// const sections = store.sections.map((v, i) => {
+				// 	if (i === index) {
+				// 		//delete sections[i];
+				// 		sections[i].remove();
+				// 		return sections;
+				// 	}
+				// });
+
+				store.sections.splice(index, 1);
+
+				//console.log(sections);
+				//reset the global store
+				setStore({ store: store });
 			}
 			//reset the global store
 		}

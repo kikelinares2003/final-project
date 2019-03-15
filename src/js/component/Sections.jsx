@@ -9,14 +9,14 @@ import { Context } from "../store/appContext.jsx";
 export class Sections extends React.Component {
 	render() {
 		return (
-			<Context.Consumer>
-				{({ store }) => {
-					return store.sections.map((v, i) => {
-						return (
-							<div key={i}>
-								<a name={v.title} />
-								<div className="content-section-b">
-									<div className="container">
+			<div className="container">
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return store.sections.map((v, i) => {
+							return (
+								<div className="sectionContainer" key={i}>
+									<a name={v.title} />
+									<div className="content-section-b">
 										<div className="row">
 											<div className="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
 												<hr className="section-heading-spacer" />
@@ -38,14 +38,22 @@ export class Sections extends React.Component {
 													alt=""
 												/>
 											</div>
+											<button
+												index={i}
+												id="deleteSection"
+												onClick={() =>
+													actions.deleteSection(i)
+												}>
+												Delete Me
+											</button>
 										</div>
 									</div>
 								</div>
-							</div>
-						);
-					});
-				}}
-			</Context.Consumer>
+							);
+						});
+					}}
+				</Context.Consumer>
+			</div>
 		);
 	}
 }
