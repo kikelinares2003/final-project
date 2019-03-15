@@ -84,22 +84,25 @@ const getState = ({ getStore, setStore }) => {
 					productName: "Part number 1",
 					productImage:
 						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
-					productPrice: "25",
-					productDescription: "Short description of item 1"
+					productPrice: 25,
+					productDescription: "Short description of item 1",
+					qty: 100
 				},
 				{
 					productName: "Part number 2",
 					productImage:
 						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
 					productPrice: "100",
-					productDescription: "Short description of item 2"
+					productDescription: "Short description of item 2",
+					qty: 1
 				},
 				{
 					productName: "Part number 3",
 					productImage:
 						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
 					productPrice: "47.99",
-					productDescription: "Short description of item 3"
+					productDescription: "Short description of item 3",
+					qty: 1
 				}
 			]
 		},
@@ -115,9 +118,23 @@ const getState = ({ getStore, setStore }) => {
 					return elm;
 				});
 
-				//reset the global store
 				setStore({ demo: demo });
+			},
+			setQty: (val, i) => {
+				const store = getStore();
+				store.cartStore[i].qty = val.target.value;
+				setStore({ cartStore: store.cartStore });
+			},
+			totalPrice: elem => {
+				const store = getStore();
+				let total = 0;
+
+				for (var i = 0; i < elem.length; i++) {
+					total = total + elem[i].productPrice * elem[i].qty;
+				}
+				return total;
 			}
+			//reset the global store
 		}
 	};
 };

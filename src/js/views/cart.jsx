@@ -6,21 +6,26 @@ import { Context } from "../store/appContext.jsx";
 import "../../styles/demo.css";
 
 export class Cart extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { total: 0 };
+	}
 	render() {
 		return (
 			<div className="container">
 				<div className="card shopping-cart">
-					<div className="card-header bg-dark text-light float-right ">
-						<i
-							className="fa fa-shopping-cart"
-							aria-hidden="true"
-							margin-
-						/>
-
+					<div className="card-header bg-primary text-light float-right ">
+						<span>
+							<i
+								className="fa fa-shopping-cart"
+								aria-hidden="true"
+								margin-
+							/>
+						</span>
 						<a
 							id="bttnCtxt"
 							href="http://google.com"
-							className="btn btn-outline-info btn-sm pull-right">
+							className="btn btn-outline-info btn-sm pull-right text-white bg-success">
 							Continue shopping
 						</a>
 						<div /*className="clearfix"*/ />
@@ -84,11 +89,17 @@ export class Cart extends React.Component {
 																className="plus"
 															/>
 															<input
+																onChange={e =>
+																	actions.setQty(
+																		e,
+																		index
+																	)
+																}
 																type="number"
 																step="1"
 																max="99"
 																min="1"
-																value="1"
+																value={item.qty}
 																title="Qty"
 																className="qty"
 																size="4"
@@ -118,17 +129,29 @@ export class Cart extends React.Component {
 								});
 							}}
 						</Context.Consumer>
-						<div className="pull-right">
-							<a
-								id="updateCart"
-								href=""
-								className="btn btn-outline-secondary pull-right">
-								Update shopping cart
-							</a>
+						<div className="pull-right float-right mr-2">
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return (
+										<button
+											onClick={() => {
+												this.setState({
+													total: actions.totalPrice(
+														store.cartStore
+													)
+												});
+											}}
+											id="updateCart"
+											className="btn btn-outline-secondary pull-right">
+											Update shopping cart
+										</button>
+									);
+								}}
+							</Context.Consumer>
 						</div>
 					</div>
 					<div className="card-footer">
-						<div className="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+						{/*<div className="coupon col-md-5 col-sm-5 no-padding-left pull-left">
 							<div className="row">
 								<div className="col-6">
 									<input
@@ -145,8 +168,7 @@ export class Cart extends React.Component {
 									/>
 								</div>
 							</div>
-						</div>
-
+						</div>*/}
 						<div className="pull-right" style={{ margin: "10px" }}>
 							<a href="" className="btn btn-success pull-right">
 								Checkout
@@ -154,7 +176,7 @@ export class Cart extends React.Component {
 							<div
 								className="pull-right"
 								style={{ margin: "5px" }}>
-								Total price: <b>50.00€</b>
+								Total price: <b>{this.state.total}</b>
 							</div>
 						</div>
 					</div>
