@@ -23,7 +23,7 @@ export class Layout extends React.Component {
 						<Route exact path="/" component={Landing} />
 						<Route exact path="/cart" component={Cart} />
 						<Route path="/blog" component={Blog} />
-						<Route path="/product" component={Product} />
+						<Route path="/product/" component={Product} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
