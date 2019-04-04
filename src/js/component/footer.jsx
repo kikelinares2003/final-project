@@ -20,7 +20,7 @@ export const Footer = () => {
 	//this methods says how the NavBar should look like in HTML
 	return (
 		<footer className="footer">
-			<div className="container">
+			<div className="container-fluid">
 				{/* here I pass the array of LIs into the UL */}
 				<ul className="nav justify-content-end">{items}</ul>
 			</div>
@@ -32,7 +32,8 @@ export const Footer = () => {
 
 let menu = [
 	{ label: "Home", url: "/landing" },
-	{ label: "Cart", url: "/cart" },
-	{ label: "Product", url: "/product" },
+	{ label: "Go Shopping", url: "/shop" },
+	{ label: "My Cart", url: "/cart" },
+	{ label: "Videos", url: "/videos" },
 	{ label: "Blog", url: "/blog" }
 ];
