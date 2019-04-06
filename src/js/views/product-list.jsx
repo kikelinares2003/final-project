@@ -1,56 +1,50 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+	Card,
+	CardImg,
+	CardText,
+	CardBody,
+	CardTitle,
+	CardSubtitle,
+	Button
+} from "reactstrap";
+import { Context } from "../store/appContext.jsx";
 
-//import Navbar from "../component/navbar.jsx";
-//import Footer from "./src/js/component/functional/footer.jsx";
-import "../../styles/product.scss";
-
-export class Products extends React.Component {
+export class ProductList extends React.Component {
 	render() {
 		return (
-			<div className="container-fluid">
-				<div className="row">
-					<div className="col-md-5">
-						<div
-							id="carouselExampleControls"
-							className="carousel slide"
-							data-ride="carousel">
-							<div className="carousel-inner">
-								<div className="carousel-item active">
-									<img
-										src="https://via.placeholder.com/150"
-										className="d-block w-100"
-										alt="..."
+			<Context.Consumer>
+				{({ store, actions }) => {
+					return store.cartStore.map((item, index) => {
+						return (
+							<div
+								className="container col-md-6"
+								key={item.theid}>
+								<Card className="mt-5 mb-5">
+									<CardImg
+										top
+										width="10%"
+										height="10%"
+										src={item.productImage}
+										alt="Card image cap"
 									/>
-								</div>
+									<CardBody>
+										<CardTitle>
+											{item.productName}
+										</CardTitle>
+										<CardText>
+											{item.productDescription}
+										</CardText>
+										<Button>Check Product</Button>
+									</CardBody>
+								</Card>
 							</div>
-							<a
-								className="carousel-control-prev"
-								href="#carouselExampleControls"
-								role="button"
-								data-slide="prev">
-								<span
-									className="carousel-control-prev-icon"
-									aria-hidden="true"
-								/>
-								<span className="sr-only">Previous</span>
-							</a>
-							<a
-								className="carousel-control-next"
-								href="#carouselExampleControls"
-								role="button"
-								data-slide="next">
-								<span
-									className="carousel-control-next-icon"
-									aria-hidden="true"
-								/>
-								<span className="sr-only">Next</span>
-							</a>
-						</div>
-					</div>
-					<div className="col-md-5">test</div>
-				</div>
-			</div>
+						);
+					});
+				}}
+			</Context.Consumer>
 		);
 	}
 }
+
+export default ProductList;

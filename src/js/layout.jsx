@@ -4,7 +4,8 @@ import ScrollToTop from "./component/functional/scrollToTop.jsx";
 
 import { Navbar } from "./component/navbar.jsx";
 import { Home } from "./views/home.jsx";
-import { Products } from "./views/product-list.jsx";
+import { Products } from "./views/product.jsx";
+import { ProductList } from "./views/product-list.jsx";
 import { Cart } from "./views/cart.jsx";
 import { Videos } from "./views/videos.jsx";
 import { Blog } from "./views/blog.jsx";
@@ -22,7 +23,8 @@ export class Layout extends React.Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/home" component={Home} />
-						<Route path="/product-list" component={Products} />
+						<Route path="/product" component={Products} />
+						<Route path="/product-list" component={ProductList} />
 						<Route exact path="/cart" component={Cart} />
 						<Route path="/videos" component={Videos} />
 						<Route path="/blog" component={Blog} />

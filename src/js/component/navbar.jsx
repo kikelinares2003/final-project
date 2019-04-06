@@ -31,7 +31,7 @@ export class Navbar extends React.Component {
 					</li>
 					<li className="nav-item">
 						<NavLink
-							to="/product"
+							to="/product-list"
 							className="header-item"
 							activeClassName="active">
 							Products

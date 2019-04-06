@@ -50,7 +50,8 @@ const getState = ({ getStore, setStore }) => {
 						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
 					productPrice: 25,
 					productDescription: "Short description of item 1",
-					qty: 100
+					qty: 100,
+					theid: 12
 				},
 				{
 					productName: "Part number 2",
@@ -58,7 +59,8 @@ const getState = ({ getStore, setStore }) => {
 						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
 					productPrice: "100",
 					productDescription: "Short description of item 2",
-					qty: 1
+					qty: 1,
+					theid: 13
 				},
 				{
 					productName: "Part number 3",
@@ -66,7 +68,8 @@ const getState = ({ getStore, setStore }) => {
 						"https://i.ytimg.com/vi/IwajDW59Z9M/maxresdefault.jpg",
 					productPrice: "47.99",
 					productDescription: "Short description of item 3",
-					qty: 1
+					qty: 1,
+					theid: 14
 				}
 			]
 		},
