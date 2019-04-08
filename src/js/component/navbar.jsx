@@ -45,6 +45,15 @@ export class Navbar extends React.Component {
 							Blog
 						</NavLink>
 					</li>
+					<li className="nav-item">
+						<NavLink
+							exact
+							to="/product"
+							className="header-item"
+							activeClassName="active">
+							Product Page
+						</NavLink>
+					</li>
 				</ul>
 			</nav>
 		);
