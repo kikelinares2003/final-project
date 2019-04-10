@@ -8,6 +8,7 @@ import {
 	CardSubtitle,
 	Button
 } from "reactstrap";
+
 import { Context } from "../store/appContext.jsx";
 
 export class ProductList extends React.Component {
