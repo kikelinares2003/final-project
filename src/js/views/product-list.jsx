@@ -16,7 +16,7 @@ export class ProductList extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					return store.cartStore.map((item, index) => {
+					return store.products.map((item, index) => {
 						return (
 							<div
 								className="container col-md-6"
