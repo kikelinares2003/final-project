@@ -16,17 +16,17 @@ import "../../styles/product-list.scss";
 export class ProductList extends React.Component {
 	render() {
 		return (
-			<CardDeck className="mt-3 mb-3 container-flex">
+			<CardDeck className="mt-3 mb-3">
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return store.products.map((item, index) => {
 							return (
 								<div
-									className="container col-md-6"
+									className="container col-sm-3"
 									key={item.theid}>
 									<Card className="mt-2 mb-2">
 										<CardImg
-											top
+											//top
 											//	width="100%"
 											src={item.image_1}
 											alt="Card image cap"
