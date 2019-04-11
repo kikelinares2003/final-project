@@ -26,15 +26,13 @@ export class ProductList extends React.Component {
 										top
 										width="10%"
 										height="10%"
-										src={item.productImage}
+										src={item.image_1}
 										alt="Card image cap"
 									/>
 									<CardBody>
-										<CardTitle>
-											{item.productName}
-										</CardTitle>
+										<CardTitle>{item.post_title}</CardTitle>
 										<CardText>
-											{item.productDescription}
+											{item.meta_keys.prod_desc}
 										</CardText>
 										<Button>Check Product</Button>
 									</CardBody>
