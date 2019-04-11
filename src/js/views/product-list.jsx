@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 
 import { Context } from "../store/appContext.jsx";
+import { Container, Row, Col } from "reactstrap";
 import "../../styles/product-list.scss";
 
 export class ProductList extends React.Component {
@@ -21,9 +22,7 @@ export class ProductList extends React.Component {
 					{({ store, actions }) => {
 						return store.products.map((item, index) => {
 							return (
-								<div
-									className="container col-sm-3"
-									key={item.theid}>
+								<div className="col-md-3" key={item.theid}>
 									<Card className="mt-2 mb-2">
 										<CardImg
 											//top
@@ -36,7 +35,7 @@ export class ProductList extends React.Component {
 												{item.post_title}
 											</CardTitle>
 											<CardText>
-												{item.meta_keys.prod_desc}
+												{item.meta_keys.short_desc}
 											</CardText>
 											<Button>Check Product</Button>
 										</CardBody>
