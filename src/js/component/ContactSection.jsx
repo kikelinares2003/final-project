@@ -9,7 +9,7 @@ const ContactSection = () => {
 	return (
 		<React.Fragment>
 			<div className="container">
-			<hr />
+				<hr />
 				<div className="row p-3">
 					<div className="col">
 						<p>Join Email</p>

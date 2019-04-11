@@ -3,11 +3,11 @@ import React from "react";
 
 //include images into your bundle
 //need cool image of auto parts!
-import blackWhiteBridge from "../../img/b-w-bridge.jpg";
+import homeHero from "../../img/home-hero.png";
 
 const HomeJumbo = () => {
 	return (
-		<div className="jumbotron">
+		<div className="jumbotron home-jumbo">
 			<h1 className="display-4">Pasco Auto Parts</h1>
 			<p className="lead">
 				We are a leading provider of after market performance auto parts
