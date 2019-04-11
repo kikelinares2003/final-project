@@ -11,7 +11,7 @@ export class ShopCategory extends React.Component {
 		return (
 			<React.Fragment>
 				<div className="container">
-					<div className="row">
+					<div className="row p-3">
 						<div className="card col-2">
 							<img src="..." className="card-img-top" alt="..." />
 							<div className="card-body">

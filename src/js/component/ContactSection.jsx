@@ -7,28 +7,29 @@ var fontColor = { color: "white" };
 
 const ContactSection = () => {
 	return (
-		<div className="container">
-			<div className="row">
-				<form>
-					<div className="col-sm-12 col-md-9">
+		<React.Fragment>
+			<div className="container">
+				<div className="row p-3">
+					<div className="col">
+						<p>Join Email</p>
+					</div>
+					<div className="col-md-6">
 						<input
 							type="email"
-							name="email"
-							required="required"
-							placeholder="Email*"
+							className="form-control"
+							id="exampleInputEmail1"
+							aria-describedby="emailHelp"
+							placeholder="Enter email"
 						/>
 					</div>
-					<div className="col-sm-12 col-md-3">
-						<input
-							type="submit"
-							name="submit"
-							value="Send Message"
-							className="btn btn-send network-name"
-						/>
+					<div className="col">
+						<button type="submit" className="btn btn-primary">
+							Submit
+						</button>
 					</div>
-				</form>
+				</div>
 			</div>
-		</div>
+		</React.Fragment>
 	);
 };
 export default ContactSection;

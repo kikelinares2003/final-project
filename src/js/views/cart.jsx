@@ -19,7 +19,7 @@ export class Cart extends React.Component {
 							<i
 								className="fa fa-shopping-cart"
 								aria-hidden="true"
-								margin-
+								// margin-
 							/>
 						</span>
 						<a
