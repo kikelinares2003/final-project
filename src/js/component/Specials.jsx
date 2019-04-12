@@ -21,7 +21,7 @@ export class Specials extends React.Component {
 											key={prod.ID}>
 											<img
 												src={prod.image_1}
-												className="card-img-top"
+												className="card-img-top img-fluid"
 												alt="..."
 											/>
 											<div className="card-body">

@@ -32,8 +32,12 @@ const Store = PassedComponent => {
 					response.json().then(data => {
 						let store = this.state.store;
 						store.products = data;
-						console.log(typeof data[1].meta_keys.is_special);
+
 						store.specials = data.filter(prod => {
+							if (prod.meta_keys.is_special == 1) return prod;
+						});
+
+						store.categories = data.filter(prod => {
 							if (prod.meta_keys.is_special == 1) return prod;
 						});
 

@@ -12,66 +12,28 @@ export class ShopCategory extends React.Component {
 			<React.Fragment>
 				<div className="container">
 					<div className="row p-3">
-						<div className="card col-2">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<p className="card-text">
-									{
-										"Some quick example text to build on the card title and make up the bulk of the card's content."
-									}
-								</p>
-							</div>
-						</div>
-						<div className="card col-2">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<p className="card-text">
-									{
-										"Some quick example text to build on the card title and make up the bulk of the card's content."
-									}
-								</p>
-							</div>
-						</div>
-						<div className="card col-2">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<p className="card-text">
-									{
-										"Some quick example text to build on the card title and make up the bulk of the card's content."
-									}
-								</p>
-							</div>
-						</div>
-						<div className="card col-2">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<p className="card-text">
-									{
-										"Some quick example text to build on the card title and make up the bulk of the card's content."
-									}
-								</p>
-							</div>
-						</div>
-						<div className="card col-2">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<p className="card-text">
-									{
-										"Some quick example text to build on the card title and make up the bulk of the card's content."
-									}
-								</p>
-							</div>
-						</div>
-						<div className="card col-2">
-							<img src="..." className="card-img-top" alt="..." />
-							<div className="card-body">
-								<p className="card-text">
-									{
-										"Some quick example text to build on the card title and make up the bulk of the card's content."
-									}
-								</p>
-							</div>
-						</div>
+						{({ store, actions }) => {
+							return store.specials.map((prod, i) => {
+								return (
+									<div
+										className="card col-2"
+										key={store.specials.ID}>
+										<img
+											src="..."
+											className="card-img-top"
+											alt="..."
+										/>
+										<div className="card-body">
+											<p className="card-text">
+												{
+													"Some quick example text to build on the card title and make up the bulk of the card's content."
+												}
+											</p>
+										</div>
+									</div>
+								);
+							});
+						}}
 					</div>
 				</div>
 			</React.Fragment>
