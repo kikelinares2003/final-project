@@ -12,7 +12,7 @@ export class Cart extends React.Component {
 	}
 	render() {
 		return (
-			<div className="container">
+			<div className="container mt-5 mb-5">
 				<div className="card shopping-cart">
 					<div className="card-header bg-primary text-light float-right ">
 						<span>
@@ -33,14 +33,14 @@ export class Cart extends React.Component {
 					<div className="cart-body">
 						<Context.Consumer>
 							{({ store, actions }) => {
-								return store.cartStore.map((item, index) => {
+								return store.products.map((item, index) => {
 									return (
 										<div key={item.toString()}>
-											<div className="row">
+											<div className="row mt-1 mb-1">
 												<div className="col-12 col-sm-12 col-md-2 text-center">
 													<img
 														className="img-responsive"
-														src={item.productImage}
+														src={item.image_1}
 														alt="prewiew"
 														width="120"
 														height="80"
@@ -51,7 +51,9 @@ export class Cart extends React.Component {
 														<strong>
 															<Link to="/product">
 																{
-																	item.productName
+																	item
+																		.meta_keys
+																		.product_name
 																}
 															</Link>
 														</strong>
@@ -59,7 +61,8 @@ export class Cart extends React.Component {
 													<h4>
 														<small>
 															{
-																item.productDescription
+																item.meta_keys
+																	.short_desc
 															}
 														</small>
 													</h4>
@@ -73,7 +76,9 @@ export class Cart extends React.Component {
 														<h6>
 															<strong>
 																{
-																	item.productPrice
+																	item
+																		.meta_keys
+																		.price
 																}{" "}
 																<span className="text-muted">
 																	x
@@ -83,11 +88,6 @@ export class Cart extends React.Component {
 													</div>
 													<div className="col-4 col-sm-4 col-md-4">
 														<div className="quantity">
-															<input
-																type="button"
-																value="+"
-																className="plus"
-															/>
 															<input
 																onChange={e =>
 																	actions.setQty(
@@ -103,11 +103,6 @@ export class Cart extends React.Component {
 																title="Qty"
 																className="qty"
 																size="4"
-															/>
-															<input
-																type="button"
-																value="-"
-																className="minus"
 															/>
 														</div>
 													</div>
