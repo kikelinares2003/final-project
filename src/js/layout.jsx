@@ -24,7 +24,7 @@ export class Layout extends React.Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/home" component={Home} />
-						<Route path="/product" component={Product} />
+						<Route path="/product/:theid" component={Product} />
 						<Route path="/product-list" component={ProductList} />
 						<Route exact path="/cart" component={Cart} />
 						<Route path="/videos" component={Videos} />

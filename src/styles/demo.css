@@ -8,3 +8,19 @@
 #updateCart{
     margin-bottom: 15px;
 }
+
+/*.product-list .card{*/
+/*    max-height: 35em;*/
+    
+/*}*/
+
+.product-list .card img {
+    width: 100%;
+    height: auto;
+   
+}
+.card-prod-list .card-body {
+    height: 15em;
+}
+
+

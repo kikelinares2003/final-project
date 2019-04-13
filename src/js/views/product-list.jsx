@@ -13,39 +13,62 @@ import {
 import { Context } from "../store/appContext.jsx";
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/product-list.scss";
+import { NavLink, Link } from "react-router-dom";
 
 export class ProductList extends React.Component {
 	render() {
 		return (
-			<CardDeck className="mt-3 mb-3">
-				<Context.Consumer>
-					{({ store, actions }) => {
-						return store.products.map((item, index) => {
-							return (
-								<div className="col-md-3" key={item.theid}>
-									<Card className="mt-2 mb-2">
-										<CardImg
-											//top
-											//	width="100%"
-											src={item.image_1}
-											alt="Card image cap"
-										/>
-										<CardBody>
-											<CardTitle>
-												{item.post_title}
-											</CardTitle>
-											<CardText>
-												{item.meta_keys.short_desc}
-											</CardText>
-											<Button>Check Product</Button>
-										</CardBody>
-									</Card>
-								</div>
-							);
-						});
-					}}
-				</Context.Consumer>
-			</CardDeck>
+			<div className="container">
+				<h2 className="brand-head p-2">Product List</h2>
+				<div className="row product-list">
+					<Context.Consumer>
+						{({ store, actions }) => {
+							return store.products.map((item, index) => {
+								return (
+									<div
+										className="col-md-6 col-lg-4 pb-2"
+										key={item.ID}>
+										<div className="card card-prod-list">
+											<div className="card-body text-center">
+												<img
+													src={item.image_1}
+													className="card-img-top w-50"
+													alt="..."
+												/>
+												<h5 className="card-title">
+													{item.post_title}
+												</h5>
+											</div>
+											<ul className="list-group list-group-flush">
+												<li className="list-group-item">
+													{item.meta_keys.short_desc}
+												</li>
+											</ul>
+											<h3 className="text-right p-1">
+												{item.meta_keys.price}
+											</h3>
+											<div className="card-body text-center">
+												<Link
+													// onClick={e=>actions.}
+													to={"/product/" + item.ID}
+													className="card-link">
+													More Information
+												</Link>
+												<a
+													href="../cart.html"
+													className="card-link">
+													Add to Cart{" "}
+													<i className="fas fa-cart-plus" />
+												</a>
+											</div>
+										</div>
+									</div>
+								);
+							});
+						}}
+					</Context.Consumer>
+				</div>
+			</div>
 		);
 	}
 }

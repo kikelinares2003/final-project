@@ -6,6 +6,15 @@ const getState = ({ getStore, setStore }) => {
 			specials: []
 		},
 		actions: {
+			getProductbyId: (prod, id) => {
+				const store = getStore();
+				for (var i = 0; i <= prod.length; i++) {
+					if (prod[i] === id) {
+						return prod[i];
+					}
+				}
+			}
+
 			// isSpecial: (prod, i) => {
 			// 	//get the store
 			// 	const store = getStore();
