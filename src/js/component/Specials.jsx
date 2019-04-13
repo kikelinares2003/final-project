@@ -1,6 +1,6 @@
 //create your first component
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
 
 //include images into your bundle
@@ -21,7 +21,7 @@ export class Specials extends React.Component {
 											key={prod.ID}>
 											<img
 												src={prod.image_1}
-												className="card-img-top"
+												className="card-img-top img-fluid"
 												alt="..."
 											/>
 											<div className="card-body">
@@ -29,18 +29,13 @@ export class Specials extends React.Component {
 													{prod.post_title}
 												</h5>
 												<p className="card-text">
-													These are the super special
-													details. These are the super
-													special details. These are
-													the super special details.
-													These are the super special
-													details.{" "}
+													{prod.meta_keys.short_desc}
 												</p>
-												<a
-													href="#"
+												<Link
+													to="/product"
 													className="btn btn-primary">
 													Save Money!
-												</a>
+												</Link>
 											</div>
 										</div>
 									);
