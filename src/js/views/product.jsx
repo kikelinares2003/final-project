@@ -20,7 +20,7 @@ export class Product extends React.Component {
 					});
 
 					return (
-						<div className="container mt-5 mb-5">
+						<div className="mt-5 mb-5">
 							<div className="container-fluid">
 								<div className="row">
 									<div className="col-md-5">
@@ -37,7 +37,10 @@ export class Product extends React.Component {
 													/>
 													<div className="carousel-item">
 														<img
-															src="https://via.placeholder.com/50"
+															src={
+																product[0]
+																	.image_2
+															}
 															className="d-block w-100"
 															alt="..."
 														/>
@@ -72,10 +75,14 @@ export class Product extends React.Component {
 											</a>
 										</div>
 									</div>
-									<div className="col-md-5">
+									<div className="col-md-7">
 										<p className="new-product">NEW</p>
 										<h2>{product[0].post_title}</h2>
-										<p>SKU: Product SKU</p>
+										<p>
+											Product ID:{" "}
+											{product[0].meta_keys.prod_id}{" "}
+										</p>
+										<hr />
 										<div className="product-rating">
 											<i className="fa fa-star gold" />{" "}
 											<i className="fa fa-star gold" />{" "}
@@ -88,13 +95,12 @@ export class Product extends React.Component {
 											<b>USD </b>
 											{product[0].meta_keys.price}
 										</p>
+										<hr />
 										<p>
-											<b>Availability: </b> Available
+											<b>Description: </b>{" "}
+											{product[0].meta_keys.prod_desc}
 										</p>
-										<div>
-											<label>Quantity: </label>
-											<input type="text" value="1" />
-										</div>
+										<hr />
 										<div className="btn-group cart">
 											<button
 												type="button"

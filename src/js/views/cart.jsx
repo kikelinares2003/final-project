@@ -33,7 +33,7 @@ export class Cart extends React.Component {
 					<div className="cart-body">
 						<Context.Consumer>
 							{({ store, actions }) => {
-								return store.products.map((item, index) => {
+								return store.cartStore.map((item, index) => {
 									return (
 										<div key={item.toString()}>
 											<div className="row mt-1 mb-1">
@@ -137,7 +137,7 @@ export class Cart extends React.Component {
 												});
 											}}
 											id="updateCart"
-											className="btn btn-outline-secondary pull-right">
+											className="btn btn-outline-secondary pull-right mt-2">
 											Update shopping cart
 										</button>
 									);

@@ -39,7 +39,7 @@ export class ProductList extends React.Component {
 													{item.post_title}
 												</h5>
 											</div>
-											<ul className="list-group list-group-flush">
+											<ul className="list-group list-group-flush prod-desc">
 												<li className="list-group-item">
 													{item.meta_keys.short_desc}
 												</li>
