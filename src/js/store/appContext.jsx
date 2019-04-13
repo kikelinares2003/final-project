@@ -37,9 +37,9 @@ const Store = PassedComponent => {
 							if (prod.meta_keys.is_special == 1) return prod;
 						});
 
-						store.categories = data.filter(prod => {
-							if (prod.meta_keys.is_special == 1) return prod;
-						});
+						// store.categories = data.filter(prod => {
+						// 	if (prod.meta_keys.is_special == 1) return prod;
+						// });
 
 						this.setState({ store });
 						// console.log(

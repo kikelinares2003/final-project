@@ -12,23 +12,19 @@ export class ShopCategory extends React.Component {
 			<React.Fragment>
 				<div className="container">
 					<div className="row p-3">
-						{({ store, actions }) => {
-							return store.specials.map((prod, i) => {
+						{({ store }) => {
+							return store.products.map((prod, i) => {
 								return (
-									<div
-										className="card col-2"
-										key={store.specials.ID}>
+									<div className="card col-2" key={prod.ID}>
 										<img
 											src="..."
 											className="card-img-top"
 											alt="..."
 										/>
 										<div className="card-body">
-											<p className="card-text">
-												{
-													"Some quick example text to build on the card title and make up the bulk of the card's content."
-												}
-											</p>
+											<h5 className="card-text">
+												{prod.category}
+											</h5>
 										</div>
 									</div>
 								);
