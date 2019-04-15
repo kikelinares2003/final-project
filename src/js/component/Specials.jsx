@@ -32,9 +32,10 @@ export class Specials extends React.Component {
 													{prod.meta_keys.short_desc}
 												</p>
 												<Link
-													to="/product"
-													className="btn btn-primary">
-													Save Money!
+													// onClick={e=>actions.}
+													to={"/product/" + prod.ID}
+													className="card-link">
+													Save Money
 												</Link>
 											</div>
 										</div>
