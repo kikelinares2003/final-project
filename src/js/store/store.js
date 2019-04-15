@@ -3,7 +3,19 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			cartStore: [],
 			products: [],
-			specials: []
+			specials: [],
+			productCategories: []
+			// session: {
+			// 	loggenIn: false,
+			// 	user_display_name: "https://my-wp-proj-kaceydawson.c9users.io/wp-json/jwt-auth/v1/token";
+
+			// 	fetch(endpoint, {
+			// 		method: "POST",
+			// 		headers: {
+			// 			"Content-Type"
+			// 		}
+			// 	})
+			// }
 		},
 		actions: {
 			getProductbyId: (prod, id) => {
@@ -13,18 +25,24 @@ const getState = ({ getStore, setStore }) => {
 						return prod[i];
 					}
 				}
+			},
+
+			getAllCategories: prod => {
+				const store = getStore();
+				const catName = [];
+				for (var i = 0; i <= prod.length; i++) {
+					if (catName[i] != prod.cat) {
+						catName[i] = prod.cat;
+						return catName;
+					}
+				}
+				console.log(catName());
 			}
 
-			// isSpecial: (prod, i) => {
-			// 	//get the store
-			// 	const store = getStore();
-			// 	//we have to loop the entire demo array to look for the respective index
-			// 	//and change its color
-			// 	const specials = store.products.filter(
-			// 		prod => prod.is - special == 1
-			// 	);
-			// 	setStore({ demo: demo });
+			// login: (user, pass) => {
+			// 	const endpoint = "";
 			// }
+
 			// setQty: (val, i) => {
 			// 	const store = getStore();
 			// 	store.cartStore[i].qty = val.target.value;
