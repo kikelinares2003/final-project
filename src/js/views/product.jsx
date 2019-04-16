@@ -103,6 +103,11 @@ export class Product extends React.Component {
 										<hr />
 										<div className="btn-group cart">
 											<button
+												onClick={() => {
+													actions.addToCart(
+														product[0]
+													);
+												}}
 												type="button"
 												className="btn btn-success mt-5">
 												Add to cart

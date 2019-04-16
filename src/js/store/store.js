@@ -13,6 +13,21 @@ const getState = ({ getStore, setStore }) => {
 						return prod[i];
 					}
 				}
+			},
+			addToCart(prod) {
+				const store = getStore();
+				store.cartStore.push(prod);
+				setStore({ cartStore: store.cartStore });
+			},
+			deleteFromCart(ID) {
+				const store = getStore();
+				let product = store.cartStore.filter((item, index) => {
+					if (item.ID !== ID) {
+						return item;
+					}
+					console.log(item);
+					setStore({ cartStore: product });
+				});
 			}
 
 			// isSpecial: (prod, i) => {

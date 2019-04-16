@@ -108,6 +108,11 @@ export class Cart extends React.Component {
 													</div>
 													<div className="col-2 col-sm-2 col-md-2 text-right">
 														<button
+															onClick={() => {
+																actions.deleteFromCart(
+																	item.ID
+																);
+															}}
 															type="button"
 															className="btn btn-outline-danger btn-xs">
 															<i
