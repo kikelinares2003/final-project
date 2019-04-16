@@ -29,20 +29,23 @@ const getState = ({ getStore, setStore }) => {
 
 			addToCart(prod) {
 				const store = getStore();
-				store.cartStore.push(prod);
+
+				store.cartStore.push({
+					qty: 1,
+					product: prod
+				});
 				setStore({ cartStore: store.cartStore });
 			},
-			deleteFromCart(ID) {
+			deleteFromCart(index) {
 				const store = getStore();
-				let product = store.cartStore.filter((item, index) => {
-					if (item.ID !== ID) {
-						return item;
-					}
-					console.log(item);
-					setStore({ cartStore: product });
-				});},
-
-
+				store.cartStore.splice(index, 1);
+				setStore({ cartStore: store.cartStore });
+			},
+			setQty: (val, i) => {
+				const store = getStore();
+				store.cartStore[i].qty = val.target.value;
+				setStore({ cartStore: store.cartStore });
+			},
 			getAllCategories: prod => {
 				const store = getStore();
 				const catName = [];
@@ -53,18 +56,12 @@ const getState = ({ getStore, setStore }) => {
 					}
 				}
 				console.log(catName());
-
 			}
 
 			// login: (user, pass) => {
 			// 	const endpoint = "";
 			// }
 
-			// setQty: (val, i) => {
-			// 	const store = getStore();
-			// 	store.cartStore[i].qty = val.target.value;
-			// 	setStore({ cartStore: store.cartStore });
-			// },
 			// totalPrice: elem => {
 			// 	const store = getStore();
 			// 	let total = 0;
