@@ -38,10 +38,10 @@ const getState = ({ getStore, setStore }) => {
 					if (item.ID !== ID) {
 						return item;
 					}
-					console.log(item);
+					//console.log(item);
 					setStore({ cartStore: product });
-				});},
-
+				});
+			},
 
 			getAllCategories: prod => {
 				const store = getStore();
@@ -51,9 +51,9 @@ const getState = ({ getStore, setStore }) => {
 						catName[i] = prod.cat;
 						return catName;
 					}
+					setStore({ cartStore: productCategories });
 				}
-				console.log(catName());
-
+				//console.log(catName());
 			}
 
 			// login: (user, pass) => {
