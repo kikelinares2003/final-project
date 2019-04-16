@@ -24,6 +24,13 @@
 .product-list .card-product-list .card-body .ul .prod-desc{
     height: 20em;
 }
+footer {
+    padding: 0 0;
+}
+.footer .nav-item {
+    color: #777;
+    /* padding: 0.85rem 2rem; */
+}
 
 
 

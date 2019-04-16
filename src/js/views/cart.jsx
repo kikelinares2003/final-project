@@ -35,12 +35,14 @@ export class Cart extends React.Component {
 							{({ store, actions }) => {
 								return store.cartStore.map((item, index) => {
 									return (
-										<div key={item.toString()}>
+										<div key={item.ID}>
 											<div className="row mt-1 mb-1">
 												<div className="col-12 col-sm-12 col-md-2 text-center">
 													<img
 														className="img-responsive"
-														src={item.image_1}
+														src={
+															item.product.image_1
+														}
 														alt="prewiew"
 														width="120"
 														height="80"
@@ -51,7 +53,7 @@ export class Cart extends React.Component {
 														<strong>
 															<Link to="/product">
 																{
-																	item
+																	item.product
 																		.meta_keys
 																		.product_name
 																}
@@ -61,7 +63,8 @@ export class Cart extends React.Component {
 													<h4>
 														<small>
 															{
-																item.meta_keys
+																item.product
+																	.meta_keys
 																	.short_desc
 															}
 														</small>
@@ -76,7 +79,7 @@ export class Cart extends React.Component {
 														<h6>
 															<strong>
 																{
-																	item
+																	item.product
 																		.meta_keys
 																		.price
 																}{" "}
@@ -110,7 +113,7 @@ export class Cart extends React.Component {
 														<button
 															onClick={() => {
 																actions.deleteFromCart(
-																	item.ID
+																	index
 																);
 															}}
 															type="button"

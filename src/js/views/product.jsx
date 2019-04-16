@@ -8,6 +8,12 @@ import "../../styles/product.scss";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext.jsx";
 
+const footerStyle = {
+	position: "absolute",
+	bottom: "0",
+	left: "0"
+};
+
 export class Product extends React.Component {
 	render() {
 		return (
