@@ -17,23 +17,23 @@ export class ShopCategory extends React.Component {
 								return store.products.map((prod, i) => {
 									return (
 										<div
-											className="card col categoryCard"
+											className="card col-3 categoryCard text-center"
 											key={prod.ID}>
 											<img
 												src={prod.image_1}
-												className="card-img-top img-fluid"
+												className="card-img-top img-fluid w-50"
 												alt="..."
 											/>
 											<div className="card-body">
 												<h5 className="card-title">
-													{prod.category}
+													{prod.meta_keys.cat}
 												</h5>
 												<hr />
 												<Link
 													// onClick={e=>actions.}
 													to={
-														"/product/" +
-														prod.category
+														"/by-category/" +
+														prod.meta_keys.cat
 													}
 													className="btn card-link">
 													Shop Category
