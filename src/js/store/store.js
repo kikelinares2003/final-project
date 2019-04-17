@@ -26,14 +26,28 @@ const getState = ({ getStore, setStore }) => {
 					}
 				}
 			},
-
 			addToCart(prod) {
 				const store = getStore();
+				//let qty = 1;
 
-				store.cartStore.push({
-					qty: 1,
-					product: prod
-				});
+				if (store.cartStore.length == 0) {
+					store.cartStore.push({
+						qty: 1,
+						product: prod
+					});
+				} else {
+					for (var i = 0; i <= store.cartStore.length; i++) {
+						if (store.cartStore[i].product.ID == prod.ID) {
+							store.cartStore[i].qty += 1;
+						} else {
+							store.cartStore.push({
+								qty: 1,
+								product: prod
+							});
+						}
+						break;
+					}
+				}
 				setStore({ cartStore: store.cartStore });
 			},
 
