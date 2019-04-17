@@ -11,6 +11,7 @@ export class Specials extends React.Component {
 		return (
 			<React.Fragment>
 				<div className="container">
+					<h3>Daily Specials</h3>
 					<div className="row p-3">
 						<Context.Consumer>
 							{({ store, actions }) => {

@@ -10,40 +10,63 @@ export class ShopCategory extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+				<hr className="p-3" />
+
 				<div className="container">
-					<div className="row p-3">
-						<Context.Consumer>
-							{({ store, actions }) => {
-								return store.products.map((prod, i) => {
-									return (
-										<div
-											className="card col-3 categoryCard text-center"
-											key={prod.ID}>
-											<img
-												src={prod.image_1}
-												className="card-img-top img-fluid w-50"
-												alt="..."
-											/>
-											<div className="card-body">
-												<h5 className="card-title">
-													{prod.meta_keys.cat}
-												</h5>
-												<hr />
-												<Link
-													// onClick={e=>actions.}
-													to={
-														"/by-category/" +
-														prod.meta_keys.cat
-													}
-													className="btn card-link">
-													Shop Category
-												</Link>
-											</div>
-										</div>
-									);
-								});
-							}}
-						</Context.Consumer>
+					<h3>Shop by Category</h3>
+					<div className="row d-flex justify-content-between my-1">
+						<Link
+							to="/by-category/Wheels"
+							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
+							<div className="text-center">
+								<h5 className="p-2">Wheels</h5>
+							</div>
+						</Link>
+						<Link
+							to="/by-category/Ignition"
+							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
+							<div className="text-center">
+								<h5 className="p-2">Ignition</h5>
+							</div>
+						</Link>
+						<Link
+							to="/by-category/Engines"
+							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
+							<div className="text-center">
+								<h5 className="p-2">Engines</h5>
+							</div>
+						</Link>
+					</div>
+
+					<div className="row d-flex justify-content-between my-1">
+						<Link
+							to="/by-category/Cooling"
+							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
+							<div className="text-center">
+								<h5 className="p-2">Cooling</h5>
+							</div>
+						</Link>
+						<Link
+							to="/by-category/Fuel"
+							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
+							<div className="text-center">
+								<h5 className="p-2">Fuel</h5>
+							</div>
+						</Link>
+						<Link
+							to="/by-category/Safety"
+							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
+							<div className="text-center">
+								<h5 className="p-2">Safety</h5>
+							</div>
+						</Link>
+						<Link
+							to="/by-category/Brakes"
+							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
+							<div className="text-center">
+								<h5 className="p-2">Brakes</h5>
+							</div>
+						</Link>
 					</div>
 				</div>
 			</React.Fragment>

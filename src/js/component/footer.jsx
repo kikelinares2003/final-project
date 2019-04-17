@@ -19,7 +19,7 @@ export const Footer = () => {
 
 	//this methods says how the NavBar should look like in HTML
 	return (
-		<footer className="footer fixed-bottom" style={footerStyle}>
+		<footer className="footer fixed-bottom">
 			<div className="container-fluid">
 				{/* here I pass the array of LIs into the UL */}
 				<ul className="nav justify-content-end">{items}</ul>
