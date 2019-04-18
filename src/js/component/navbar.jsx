@@ -27,9 +27,6 @@ export class Navbar extends React.Component {
 							to="/cart"
 							className="header-item"
 							activeClassName="active">
-<<<<<<< HEAD
-							Cart (3)
-=======
 							Cart (
 							<Context.Consumer>
 								{({ store, actions }) => {
@@ -37,7 +34,6 @@ export class Navbar extends React.Component {
 								}}
 							</Context.Consumer>
 							)
->>>>>>> 9c06cde6a6396959a8ce6205c1a0b9d98a88407a
 						</NavLink>
 					</li>
 					<li className="nav-item">
