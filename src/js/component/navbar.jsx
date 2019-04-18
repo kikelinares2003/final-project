@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Context } from "../store/appContext.jsx";
 
 //style sheet
 
@@ -26,7 +27,13 @@ export class Navbar extends React.Component {
 							to="/cart"
 							className="header-item"
 							activeClassName="active">
-							Cart
+							Cart (
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return <a>{actions.ItemsInCart()}</a>;
+								}}
+							</Context.Consumer>
+							)
 						</NavLink>
 					</li>
 					<li className="nav-item">
