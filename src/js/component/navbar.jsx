@@ -26,7 +26,7 @@ export class Navbar extends React.Component {
 							to="/cart"
 							className="header-item"
 							activeClassName="active">
-							Cart
+							Cart (3)
 						</NavLink>
 					</li>
 					<li className="nav-item">

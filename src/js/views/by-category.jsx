@@ -27,7 +27,7 @@ export class ByCategory extends React.Component {
 							let prod = store.products.filter(
 								(product, index) => {
 									if (
-										product.meta_keys.cat ==
+										product.meta_keys.cat[0] ==
 										this.props.match.params.cat
 									) {
 										return product;
