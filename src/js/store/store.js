@@ -81,20 +81,21 @@ const getState = ({ getStore, setStore }) => {
 					}
 					setStore({ productCategories: store.productCategories });
 				}
-			}
+			},
 
 			// login: (user, pass) => {
 			// 	const endpoint = "";
 			// }
 
-			// totalPrice: elem => {
-			// 	const store = getStore();
-			// 	let total = 0;
-			// 	for (var i = 0; i < elem.length; i++) {
-			// 		total = total + elem[i].productPrice * elem[i].qty;
-			// 	}
-			// 	return total;
-			// },
+			totalPrice: elem => {
+				const store = getStore();
+				let total = 0;
+				for (var i = 0; i < elem.length; i++) {
+					total =
+						total + elem[i].product.meta_keys.price * elem[i].qty;
+				}
+				return total;
+			}
 			// deleteSection: index => {
 			// 	//get the store
 			// 	const store = getStore();

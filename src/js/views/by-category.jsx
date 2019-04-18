@@ -66,7 +66,11 @@ export class ByCategory extends React.Component {
 													More Information
 												</Link>
 												<a
-													href="../cart.html"
+													href={""}
+													onClick={e => {
+														e.preventDefault();
+														actions.addToCart(item);
+													}}
 													className="card-link">
 													Add to Cart{" "}
 													<i className="fas fa-cart-plus" />
