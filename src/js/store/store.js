@@ -95,6 +95,14 @@ const getState = ({ getStore, setStore }) => {
 						total + elem[i].product.meta_keys.price * elem[i].qty;
 				}
 				return total;
+			},
+			ItemsInCart() {
+				const store = getStore();
+				var total = 0;
+				for (var i = 0; i < store.cartStore.length; i++) {
+					total += store.cartStore[i].qty;
+				}
+				return total;
 			}
 			// deleteSection: index => {
 			// 	//get the store
