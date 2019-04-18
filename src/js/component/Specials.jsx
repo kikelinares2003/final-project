@@ -18,14 +18,17 @@ export class Specials extends React.Component {
 								return store.specials.map((prod, i) => {
 									return (
 										<div
-											className="card col-4 specialsCard"
+											className="card col specialsCard mx-1"
 											key={prod.ID}>
-											<img
-												src={prod.image_1}
-												className="card-img-top img-fluid"
-												alt="..."
-											/>
-											<div className="card-body">
+											<div className="specialImg">
+												<img
+													src={prod.image_1}
+													className="card-img-top img-fluid mx-auto"
+													alt="..."
+												/>
+											</div>
+											<div className="clearer" />
+											<div className="card-body text-left d-flex flex-column justify-content-between">
 												<h5 className="card-title">
 													{prod.post_title}
 												</h5>
@@ -35,7 +38,7 @@ export class Specials extends React.Component {
 												<Link
 													// onClick={e=>actions.}
 													to={"/product/" + prod.ID}
-													className="card-link">
+													className="btn btn-primary card-link">
 													Save Money
 												</Link>
 											</div>

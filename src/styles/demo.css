@@ -1,8 +1,28 @@
+.clearer {
+    height: 0;
+    clear:both;
+}
 .home-jumbo {
     background: url('../img/home-hero.png') 50% 50%;
 }
+.specialsCard {
+    overflow: hidden;
+}
+.specialsCard h5.card-title {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.specialsCard p.card-text {
+
+}
+.specialsCard p.card-text:after {
+ 
+}
 .specialsCard img {
-    max-height: 15em;
+    max-height: 12em;
+    width: auto;
+    margin: 0 auto;
 }
 #bttnCtxt {
     float: right;
