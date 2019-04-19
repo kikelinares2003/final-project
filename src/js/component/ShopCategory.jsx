@@ -12,28 +12,28 @@ export class ShopCategory extends React.Component {
 			<React.Fragment>
 				<hr className="p-3" />
 
-				<div className="container">
+				<div className="container shopCategory">
 					<h3>Shop by Category</h3>
 					<div className="row d-flex justify-content-between my-1">
 						<Link
 							to="/by-category/Wheels"
 							className="wheels col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center">
-								<h5 className="p-2">Wheels</h5>
+							<div className="text-center align middle">
+								Wheels
 							</div>
 						</Link>
 						<Link
 							to="/by-category/Ignition"
 							className="ignition col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center">
-								<h5 className="p-2">Ignition</h5>
+							<div className="text-center align middle">
+								Ignition
 							</div>
 						</Link>
 						<Link
 							to="/by-category/Engines"
 							className="engines col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center">
-								<h5 className="p-2">Engines</h5>
+							<div className="text-center align middle">
+								Engines
 							</div>
 						</Link>
 					</div>
@@ -42,29 +42,27 @@ export class ShopCategory extends React.Component {
 						<Link
 							to="/by-category/Cooling"
 							className="cooling col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center">
-								<h5 className="p-2">Cooling</h5>
+							<div className="text-center align middle">
+								Cooling
 							</div>
 						</Link>
 						<Link
 							to="/by-category/Fuel"
 							className="fuel col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center">
-								<h5 className="p-2">Fuel</h5>
-							</div>
+							<div className="text-center align middle">Fuel</div>
 						</Link>
 						<Link
 							to="/by-category/Safety"
 							className="safety col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center">
-								<h5 className="p-2">Safety</h5>
+							<div className="text-center align middle">
+								Safety
 							</div>
 						</Link>
 						<Link
 							to="/by-category/Brakes"
 							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center">
-								<h5 className="p-2">Brakes</h5>
+							<div className="text-center align middle">
+								Brakes
 							</div>
 						</Link>
 					</div>
