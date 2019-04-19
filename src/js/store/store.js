@@ -91,8 +91,7 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				let total = 0;
 				for (var i = 0; i < elem.length; i++) {
-					total =
-						total + elem[i].product.meta_keys.price * elem[i].qty;
+					total = total + elem[i].product.acf.price * elem[i].qty;
 				}
 				return total;
 			},

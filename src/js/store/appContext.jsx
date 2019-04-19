@@ -34,11 +34,13 @@ const Store = PassedComponent => {
 						store.products = data;
 
 						store.specials = data.filter(prod => {
+
 							if (prod.acf.is_special == 1) return prod;
+							if (prod.acf.is_special == true) return prod;
 						});
 
 						// store.categories = data.filter(prod => {
-						// 	if (prod.meta_keys.is_special == 1) return prod;
+						// 	if (prod.acf.is_special == true) return prod;
 						// });
 
 						this.setState({ store });
