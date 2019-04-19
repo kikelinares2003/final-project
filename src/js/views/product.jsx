@@ -26,7 +26,7 @@ export class Product extends React.Component {
 					});
 
 					return (
-						<div className="mt-5 mb-5">
+						<div className="mt-5 mb-5" key={store.products.ID}>
 							<div className="container-fluid">
 								<div className="row">
 									<div className="col-md-5">

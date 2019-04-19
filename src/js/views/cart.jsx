@@ -136,18 +136,20 @@ export class Cart extends React.Component {
 							<Context.Consumer>
 								{({ store, actions }) => {
 									return (
-										<button
-											onClick={() => {
-												this.setState({
-													total: actions.totalPrice(
-														store.cartStore
-													)
-												});
-											}}
-											id="updateCart"
-											className="btn btn-outline-secondary pull-right mt-2">
-											Update shopping cart
-										</button>
+										<div key={store.products.ID}>
+											<button
+												onClick={() => {
+													this.setState({
+														total: actions.totalPrice(
+															store.cartStore
+														)
+													});
+												}}
+												id="updateCart"
+												className="btn btn-outline-secondary pull-right mt-2">
+												Update shopping cart
+											</button>
+										</div>
 									);
 								}}
 							</Context.Consumer>
