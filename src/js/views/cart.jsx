@@ -54,7 +54,7 @@ export class Cart extends React.Component {
 															<Link to="/product">
 																{
 																	item.product
-																		.meta_keys
+																		.acf
 																		.product_name
 																}
 															</Link>
@@ -63,8 +63,7 @@ export class Cart extends React.Component {
 													<h4>
 														<small>
 															{
-																item.product
-																	.meta_keys
+																item.product.acf
 																	.short_desc
 															}
 														</small>
@@ -80,7 +79,7 @@ export class Cart extends React.Component {
 															<strong>
 																{
 																	item.product
-																		.meta_keys
+																		.acf
 																		.price
 																}{" "}
 																<span className="text-muted">
