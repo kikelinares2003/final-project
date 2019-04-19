@@ -31,17 +31,17 @@ export class ProductList extends React.Component {
 										<div className="card card-prod-list">
 											<div className="card-body text-center">
 												<img
-													src={item.image_1}
+													src={item.acf.image_1}
 													className="card-img-top w-50"
 													alt="..."
 												/>
 												<h5 className="card-title">
-													{item.post_title}
+													{item.acf.product_name}
 												</h5>
 											</div>
 											<ul className="list-group list-group-flush prod-desc">
 												<li className="list-group-item">
-													{item.meta_keys.short_desc}
+													{item.acf.short_desc}
 												</li>
 											</ul>
 											<h3 className="text-right p-1">
