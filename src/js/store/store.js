@@ -26,16 +26,15 @@ const getState = ({ getStore, setStore }) => {
 					}
 				}
 			},
+			findProduct(prod) {},
 			addToCart(prod) {
 				const store = getStore();
-				//let qty = 1;
-
 				if (store.cartStore.length == 0) {
 					store.cartStore.push({
 						qty: 1,
 						product: prod
 					});
-				} else {
+				} else if (store.cartStore.length > 0) {
 					for (var i = 0; i <= store.cartStore.length; i++) {
 						if (store.cartStore[i].product.ID == prod.ID) {
 							store.cartStore[i].qty += 1;
@@ -44,8 +43,9 @@ const getState = ({ getStore, setStore }) => {
 								qty: 1,
 								product: prod
 							});
+
+							break;
 						}
-						break;
 					}
 				}
 				setStore({ cartStore: store.cartStore });
