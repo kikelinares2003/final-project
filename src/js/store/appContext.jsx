@@ -34,7 +34,6 @@ const Store = PassedComponent => {
 						store.products = data;
 
 						store.specials = data.filter(prod => {
-
 							if (prod.acf.is_special == 1) return prod;
 							if (prod.acf.is_special == true) return prod;
 						});

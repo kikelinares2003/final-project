@@ -35,13 +35,14 @@ export class Cart extends React.Component {
 							{({ store, actions }) => {
 								return store.cartStore.map((item, index) => {
 									return (
-										<div key={item.ID}>
+										<div key={item.product.ID}>
 											<div className="row mt-1 mb-1">
 												<div className="col-12 col-sm-12 col-md-2 text-center">
 													<img
 														className="img-responsive"
 														src={
-															item.product.image_1
+															item.product.acf
+																.image_1
 														}
 														alt="prewiew"
 														width="120"
@@ -104,7 +105,7 @@ export class Cart extends React.Component {
 																value={item.qty}
 																title="Qty"
 																className="qty"
-																size="4"
+																size="6"
 															/>
 														</div>
 													</div>

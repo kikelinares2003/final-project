@@ -26,7 +26,16 @@ const getState = ({ getStore, setStore }) => {
 					}
 				}
 			},
-			findProduct(prod) {},
+			findProduct(prod) {
+				const store = getStore();
+				let index = -1;
+				for (var i = 0; i < store.cartStore.length; i++) {
+					if (store.cartStore[i].product.ID == prod.ID) {
+						index = i;
+					}
+				}
+				return index;
+			},
 			addToCart(prod) {
 				const store = getStore();
 				if (store.cartStore.length == 0) {
@@ -34,19 +43,16 @@ const getState = ({ getStore, setStore }) => {
 						qty: 1,
 						product: prod
 					});
-				} else if (store.cartStore.length > 0) {
-					for (var i = 0; i <= store.cartStore.length; i++) {
-						if (store.cartStore[i].product.ID == prod.ID) {
-							store.cartStore[i].qty += 1;
-						} else {
-							store.cartStore.push({
-								qty: 1,
-								product: prod
-							});
-
-							break;
-						}
-					}
+				} else if (
+					store.cartStore.length > 0 &&
+					this.findProduct(prod) >= 0
+				) {
+					store.cartStore[this.findProduct(prod)].qty += 1;
+				} else {
+					store.cartStore.push({
+						qty: 1,
+						product: prod
+					});
 				}
 				setStore({ cartStore: store.cartStore });
 			},
@@ -101,6 +107,7 @@ const getState = ({ getStore, setStore }) => {
 				for (var i = 0; i < store.cartStore.length; i++) {
 					total += store.cartStore[i].qty;
 				}
+				console.log(total);
 				return total;
 			}
 			// deleteSection: index => {
