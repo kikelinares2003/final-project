@@ -2,20 +2,23 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			cartStore: [],
-			products: [],
+			products: [
+				// {
+				// 	ID: 1,
+				// 	product_name: "Product 1",
+				// 	price: 200,
+				// 	image_1:
+				// 		"https://appgrooves.com/cdn/mc/AUTO_AND_VEHICLES/1_w730.jpg"
+				// }
+			],
 			specials: [],
-			productCategories: []
-			// session: {
-			// 	loggenIn: false,
-			// 	user_display_name: "https://my-wp-proj-kaceydawson.c9users.io/wp-json/jwt-auth/v1/token";
-
-			// 	fetch(endpoint, {
-			// 		method: "POST",
-			// 		headers: {
-			// 			"Content-Type"
-			// 		}
-			// 	})
-			// }
+			productCategories: [],
+			session: {
+				isLoggedIn: false,
+				username: "user",
+				password: "pass",
+				token: ""
+			}
 		},
 		actions: {
 			getProductbyId: (prod, id) => {
@@ -47,7 +50,9 @@ const getState = ({ getStore, setStore }) => {
 					store.cartStore.length > 0 &&
 					this.findProduct(prod) >= 0
 				) {
-					store.cartStore[this.findProduct(prod)].qty += 1;
+					store.cartStore[this.findProduct(prod)].qty =
+						parseInt(store.cartStore[this.findProduct(prod)].qty) +
+						1;
 				} else {
 					store.cartStore.push({
 						qty: 1,
@@ -81,23 +86,68 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				const catName = [];
 				for (var i = 0; i <= prod.length; i++) {
-					if (catName[i] != prod.cat) {
-						catName[i] = prod.cat;
+					if (catName[i] != prod.meta_keys.category) {
+						catName[i] = prod.meta_keys.category;
 						return catName;
 					}
 					setStore({ productCategories: store.productCategories });
 				}
 			},
+			handleSignOut(e) {
+				const store = getStore();
+				e.preventDefault();
+				store.session = {
+					isLoggedIn: false,
+					username: "user",
+					password: "pass",
+					token: ""
+				};
+				store.cartStore = [];
+				this.props.history.push("/login");
+				setStore({ store: store });
+			},
 
-			// login: (user, pass) => {
-			// 	const endpoint = "";
-			// }
+			login: (user, pass) => {
+				const endpoint =
+					"https://word-press-project-kikelinares2003.c9users.io/wp-json/jwt-auth/v1/token";
+				// fetch session
+
+				fetch(endpoint, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						username: user,
+						password: pass
+					})
+				})
+					.then(res => {
+						if (res.status !== 200) {
+							console.log(
+								"Connection Error, status " + res.status
+							);
+							return;
+						}
+						res.json().then(data => {
+							let store = getStore();
+							store.session = data;
+							store.session.isLoggedIn = true;
+							setStore({
+								store
+							});
+						});
+					})
+					.catch(err => {
+						alert("Fetch error: ", err);
+					});
+			},
 
 			totalPrice: elem => {
 				const store = getStore();
 				let total = 0;
 				for (var i = 0; i < elem.length; i++) {
-					total = total + elem[i].product.acf.price * elem[i].qty;
+					total = total + elem[i].product.price * elem[i].qty;
 				}
 				return total;
 			},
@@ -105,9 +155,9 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				var total = 0;
 				for (var i = 0; i < store.cartStore.length; i++) {
-					total += store.cartStore[i].qty;
+					total += parseInt(store.cartStore[i].qty);
 				}
-				console.log(total);
+				//console.log(total);
 				return total;
 			}
 			// deleteSection: index => {

@@ -12,6 +12,7 @@ import { Videos } from "./views/videos.jsx";
 import { Blog } from "./views/blog.jsx";
 import { Product } from "./views/product.jsx";
 import { Footer } from "./component/footer.jsx";
+import { Login } from "./views/login.jsx";
 
 import Store from "./store/appContext.jsx";
 
@@ -34,7 +35,7 @@ export class Layout extends React.Component {
 						<Route exact path="/cart" component={Cart} />
 						<Route path="/videos" component={Videos} />
 						<Route path="/blog" component={Blog} />
-						<Route path="/product" component={Product} />
+						<Route path="/login" component={Login} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

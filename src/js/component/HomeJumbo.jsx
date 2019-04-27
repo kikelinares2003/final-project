@@ -9,16 +9,10 @@ const HomeJumbo = () => {
 	return (
 		<div className="jumbotron home-jumbo">
 			<div className="container">
-				<h1 className="display-4">Pasco Auto Parts</h1>
-				<p className="lead">
-					We are a leading provider of after market performance auto
-					parts
-				</p>
+				<h1 className="display-4">Computer Solutions</h1>
+				<p className="lead">IT Products Technology Solutions</p>
 				<hr className="my-4" />
-				<p>
-					It uses utility classNamees for typography and spacing to
-					space content out within the larger container.
-				</p>
+				<p />
 				<a
 					className="btn btn-primary btn-lg"
 					href="product-list.jsx"

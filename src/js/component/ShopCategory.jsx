@@ -19,21 +19,21 @@ export class ShopCategory extends React.Component {
 							to="/by-category/Wheels"
 							className="wheels col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
-								Wheels
+								Servers
 							</div>
 						</Link>
 						<Link
 							to="/by-category/Ignition"
 							className="ignition col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
-								Ignition
+								Printers and Scanners
 							</div>
 						</Link>
 						<Link
 							to="/by-category/Engines"
 							className="engines col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
-								Engines
+								Networking
 							</div>
 						</Link>
 					</div>
@@ -43,7 +43,7 @@ export class ShopCategory extends React.Component {
 							to="/by-category/Cooling"
 							className="cooling col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
-								Cooling
+								Memory
 							</div>
 						</Link>
 						<Link
@@ -55,14 +55,14 @@ export class ShopCategory extends React.Component {
 							to="/by-category/Safety"
 							className="safety col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
-								Safety
+								Storage
 							</div>
 						</Link>
 						<Link
 							to="/by-category/Brakes"
 							className="brakes col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
-								Brakes
+								Projectors
 							</div>
 						</Link>
 					</div>

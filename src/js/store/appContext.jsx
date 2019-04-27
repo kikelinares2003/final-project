@@ -20,37 +20,41 @@ const Store = PassedComponent => {
 			// this function is the equivalent to "window.onLoad"
 			// it only run once on the entire application lifetime
 			// you should do your ajax requests here
-			fetch(
-				"https://my-wp-proj-kaceydawson.c9users.io/wp-json/sample_api/v1/products"
-			)
-				.then(response => {
-					if (response.status !== 200) {
-						alert("Connection error, status " + response.status);
-						return;
-					}
+			{
+				fetch(
+					"https://word-press-project-kikelinares2003.c9users.io/wp-json/sample_api/v1/product"
+				)
+					.then(response => {
+						if (response.status !== 200) {
+							alert(
+								"Connection error, status " + response.status
+							);
+							return;
+						}
 
-					response.json().then(data => {
-						let store = this.state.store;
-						store.products = data;
+						response.json().then(data => {
+							let store = this.state.store;
+							store.products = data;
 
-						store.specials = data.filter(prod => {
-							if (prod.acf.is_special == 1) return prod;
-							if (prod.acf.is_special == true) return prod;
+							store.specials = data.filter(prod => {
+								if (prod.acf.is_special == 1) return prod;
+								if (prod.acf.is_special == true) return prod;
+							});
+
+							// store.categories = data.filter(prod => {
+							// 	if (prod.acf.is_special == true) return prod;
+							// });
+
+							this.setState({ store });
+							// console.log(
+							// 	data.posts[1].attachments[2].images.thumbnail
+							// );
 						});
-
-						// store.categories = data.filter(prod => {
-						// 	if (prod.acf.is_special == true) return prod;
-						// });
-
-						this.setState({ store });
-						// console.log(
-						// 	data.posts[1].attachments[2].images.thumbnail
-						// );
+					})
+					.catch(err => {
+						alert("Fetch error: ", err);
 					});
-				})
-				.catch(err => {
-					alert("Fetch error: ", err);
-				});
+			}
 		} // ends componentDidMount()
 
 		render() {

@@ -38,8 +38,7 @@ export class Product extends React.Component {
 												<div className="carousel-item active">
 													<img
 														src={
-															product[0].acf
-																.image_1
+															product[0].image.url
 														}
 														className="d-block w-100"
 														alt="..."
@@ -47,8 +46,8 @@ export class Product extends React.Component {
 													<div className="carousel-item">
 														<img
 															src={
-																product[0].acf
-																	.image_2
+																product[0]
+																	.image_1.url
 															}
 															className="d-block w-100"
 															alt="..."
@@ -88,7 +87,8 @@ export class Product extends React.Component {
 										<p className="new-product">NEW</p>
 										<h2>{product[0].post_title}</h2>
 										<p>
-											Product ID: {product[0].acf.prod_id}{" "}
+											Product ID:{" "}
+											{product[0].meta_keys.part_number}{" "}
 										</p>
 										<hr />
 										<div className="product-rating">
@@ -101,12 +101,12 @@ export class Product extends React.Component {
 										<p className="price">
 											{" "}
 											<b>USD </b>
-											{product[0].acf.price}
+											{product[0].meta_keys.price}
 										</p>
 										<hr />
 										<p>
 											<b>Description: </b>{" "}
-											{product[0].acf.prod_desc}
+											{product[0].post_content}
 										</p>
 										<hr />
 										<div className="btn-group cart">

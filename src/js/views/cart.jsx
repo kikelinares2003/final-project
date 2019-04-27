@@ -41,8 +41,8 @@ export class Cart extends React.Component {
 													<img
 														className="img-responsive"
 														src={
-															item.product.acf
-																.image_1
+															item.product.image
+																.url
 														}
 														alt="prewiew"
 														width="120"
@@ -55,7 +55,6 @@ export class Cart extends React.Component {
 															<Link to="/product">
 																{
 																	item.product
-																		.acf
 																		.product_name
 																}
 															</Link>
@@ -64,7 +63,7 @@ export class Cart extends React.Component {
 													<h4>
 														<small>
 															{
-																item.product.acf
+																item.product
 																	.short_desc
 															}
 														</small>
@@ -80,7 +79,6 @@ export class Cart extends React.Component {
 															<strong>
 																{
 																	item.product
-																		.acf
 																		.price
 																}{" "}
 																<span className="text-muted">
@@ -92,12 +90,13 @@ export class Cart extends React.Component {
 													<div className="col-4 col-sm-4 col-md-4">
 														<div className="quantity">
 															<input
-																onChange={e =>
+																onChange={e => {
+																	e.preventDefault();
 																	actions.setQty(
 																		e,
 																		index
-																	)
-																}
+																	);
+																}}
 																type="number"
 																step="1"
 																max="99"

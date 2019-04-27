@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
+import PropTypes from "prop-types";
 
 //style sheet
 
@@ -27,7 +28,12 @@ export class Navbar extends React.Component {
 							to="/cart"
 							className="header-item"
 							activeClassName="active">
-							Cart ()
+							Cart <i className="fas fa-cart-plus" />{" "}
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return actions.ItemsInCart();
+								}}
+							</Context.Consumer>{" "}
 						</NavLink>
 					</li>
 					<li className="nav-item">
@@ -47,16 +53,43 @@ export class Navbar extends React.Component {
 						</NavLink>
 					</li>
 					<li className="nav-item">
-						<NavLink
-							exact
-							to="/product"
-							className="header-item"
-							activeClassName="active">
-							Product Page
-						</NavLink>
+						<Context.Consumer>
+							{({ store, actions }) => {
+								if (store.session.isLoggedIn) {
+									return (
+										<NavLink
+											exact
+											to="/login"
+											onClick={e => {
+												actions.handleSignOut();
+											}}
+											className="header-item"
+											activeClassName="active">
+											Log Out{" "}
+											<i className="fas fa-sign-in-alt" />
+										</NavLink>
+									);
+								} else {
+									return (
+										<NavLink
+											exact
+											to="/login"
+											className="header-item"
+											activeClassName="active">
+											Login{" "}
+											<i className="fas fa-sign-in-alt" />
+										</NavLink>
+									);
+								}
+							}}
+						</Context.Consumer>
 					</li>
 				</ul>
 			</nav>
 		);
 	}
 }
+
+Navbar.propTypes = {
+	history: PropTypes.object
+};
