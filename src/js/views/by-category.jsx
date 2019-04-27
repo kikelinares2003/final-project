@@ -27,8 +27,9 @@ export class ByCategory extends React.Component {
 							let prod = store.products.filter(
 								(product, index) => {
 									if (
-										product.acf.cat ==
-										this.props.match.params.cat
+										product.meta_keys.category.includes(
+											this.props.match.params.category
+										)
 									) {
 										return product;
 									}
@@ -42,7 +43,7 @@ export class ByCategory extends React.Component {
 										<div className="card card-prod-list">
 											<div className="card-body text-center">
 												<img
-													src={item.acf.image_1}
+													src={item.image.url}
 													className="card-img-top w-50"
 													alt="..."
 												/>
@@ -52,11 +53,11 @@ export class ByCategory extends React.Component {
 											</div>
 											<ul className="list-group list-group-flush prod-desc">
 												<li className="list-group-item">
-													{item.acf.short_desc}
+													{item.meta_keys.short_desc}
 												</li>
 											</ul>
 											<h3 className="text-right p-1">
-												{item.acf.price}
+												${item.meta_keys.price}
 											</h3>
 											<div className="card-body text-center">
 												<Link

@@ -100,13 +100,13 @@ export class Product extends React.Component {
 										</div>
 										<p className="price">
 											{" "}
-											<b>USD </b>
+											<b>USD </b>$
 											{product[0].meta_keys.price}
 										</p>
 										<hr />
 										<p>
 											<b>Description: </b>{" "}
-											{product[0].post_content}
+											{product[0].meta_keys.description}
 										</p>
 										<hr />
 										<div className="btn-group cart">

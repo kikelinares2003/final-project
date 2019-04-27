@@ -29,7 +29,7 @@ export class Layout extends React.Component {
 						<Route path="/product/:theid" component={Product} />
 						<Route path="/product-list" component={ProductList} />
 						<Route
-							path="/by-category/:cat"
+							path="/by-category/:category"
 							component={ByCategory}
 						/>
 						<Route exact path="/cart" component={Cart} />
