@@ -1,6 +1,6 @@
 //create your first component
 import React from "react";
-
+import { NavLink, Link } from "react-router-dom";
 //include images into your bundle
 //need cool image of auto parts!
 import homeHero from "../../img/home-hero.png";
@@ -13,12 +13,12 @@ const HomeJumbo = () => {
 				<p className="lead">IT Products Technology Solutions</p>
 				<hr className="my-4" />
 				<p />
-				<a
+				<Link
 					className="btn btn-primary btn-lg"
-					href="product-list.jsx"
+					to={"/product-list/"}
 					role="button">
 					Go Shopping
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

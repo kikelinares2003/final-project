@@ -45,7 +45,7 @@ export class ProductList extends React.Component {
 												</li>
 											</ul>
 											<h3 className="text-right p-1">
-												{item.price}
+												${item.price}
 											</h3>
 											<div className="card-body text-center">
 												<Link

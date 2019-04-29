@@ -22,7 +22,7 @@ export class Specials extends React.Component {
 											key={prod.ID}>
 											<div className="specialImg">
 												<img
-													src={prod.acf.image_1}
+													src={prod.image.url}
 													className="card-img-top img-fluid mx-auto"
 													alt="..."
 												/>
@@ -33,7 +33,7 @@ export class Specials extends React.Component {
 													{prod.post_title}
 												</h5>
 												<p className="card-text">
-													{prod.acf.short_desc}
+													{prod.meta_keys.short_desc}
 												</p>
 												<Link
 													// onClick={e=>actions.}

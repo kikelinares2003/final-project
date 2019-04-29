@@ -22,12 +22,12 @@ export class Cart extends React.Component {
 								// margin-
 							/>
 						</span>
-						<a
+						<Link
 							id="bttnCtxt"
-							href="http://google.com"
+							to={"/product-list/"}
 							className="btn btn-outline-info btn-sm pull-right text-white bg-success">
 							Continue shopping
-						</a>
+						</Link>
 						<div /*className="clearfix"*/ />
 					</div>
 					<div className="cart-body">
@@ -76,6 +76,7 @@ export class Cart extends React.Component {
 															paddingTop: "5px"
 														}}>
 														<h6>
+															$
 															<strong>
 																{
 																	item.product
@@ -180,7 +181,7 @@ export class Cart extends React.Component {
 							<div
 								className="pull-right"
 								style={{ margin: "5px" }}>
-								Total price: <b>{this.state.total}</b>
+								Total price:$ <b>{this.state.total}</b>
 							</div>
 						</div>
 					</div>

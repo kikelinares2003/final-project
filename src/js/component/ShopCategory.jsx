@@ -24,7 +24,7 @@ export class ShopCategory extends React.Component {
 							</div>
 						</Link>
 						<Link
-							to="/by-category/Ignition"
+							to="/by-category/Printers&Scanners"
 							className="ignition col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
 								Printers and Scanners
@@ -48,12 +48,12 @@ export class ShopCategory extends React.Component {
 							</div>
 						</Link>
 						<Link
-							to="/by-category/Fuel"
+							to="/by-category/Test"
 							className="fuel col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">Fuel</div>
 						</Link>
 						<Link
-							to="/by-category/Safety"
+							to="/by-category/Storage"
 							className="safety col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
 								Storage
