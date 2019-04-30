@@ -13,6 +13,7 @@ import { Blog } from "./views/blog.jsx";
 import { Product } from "./views/product.jsx";
 import { Footer } from "./component/footer.jsx";
 import { Login } from "./views/login.jsx";
+import { CheckOut } from "./views/check-out.jsx";
 import { ProfilePage } from "./views/profile-page.jsx";
 import Store from "./store/appContext.jsx";
 
@@ -33,7 +34,7 @@ export class Layout extends React.Component {
 							component={ByCategory}
 						/>
 						<Route exact path="/cart" component={Cart} />
-						<Route path="/videos" component={Videos} />
+						<Route path="/check-out" component={CheckOut} />
 						<Route path="/blog" component={Blog} />
 						<Route path="/login" component={Login} />
 						<Route path="/profile-page" component={ProfilePage} />
