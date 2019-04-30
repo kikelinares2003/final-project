@@ -7,7 +7,7 @@ import CheckOutForm from "../component/co-form.jsx";
 //import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
-export class Home extends React.Component {
+export class CheckOut extends React.Component {
 	render() {
 		return (
 			<div className="container">

@@ -2,6 +2,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
+import { Form } from "react";
 
 //include images into your bundle
 //import capeImg from "../../img/cape_inView.jpg";
@@ -19,34 +20,28 @@ export class CheckOutCart extends React.Component {
 					</h4>
 
 					<ul className="list-group mb-3">
-						<Context.Consumer>
-							<React.Fragment>
-								{({ store, actions }) => {
-									return store.cartStore.map(
-										(item, index) => {
-											return (
-												<li
-													className="list-group-item d-flex justify-content-between lh-condensed"
-													key={index}>
-													<div>
-														<h6 className="my-0">
-															{item.post_title}
-														</h6>
-													</div>
-													<span className="text-muted">
-														{item.post_title}
-													</span>
-												</li>
-											);
-										}
-									);
-								}}
-								<li className="list-group-item d-flex justify-content-between">
-									<span>Total (USD)</span>
-									<strong>$20</strong>
-								</li>
-							</React.Fragment>
-						</Context.Consumer>
+						{({ store, actions }) => {
+							return store.cartStore.map((item, index) => {
+								return (
+									<li
+										className="list-group-item d-flex justify-content-between lh-condensed"
+										key={index}>
+										<div>
+											<h6 className="my-0">
+												{item.post_title}
+											</h6>
+										</div>
+										<span className="text-muted">
+											{item.post_title}
+										</span>
+									</li>
+								);
+							});
+						}}
+						<li className="list-group-item d-flex justify-content-between">
+							<span>Total (USD)</span>
+							<strong>$20</strong>
+						</li>
 					</ul>
 
 					<form className="card p-2">
@@ -70,3 +65,5 @@ export class CheckOutCart extends React.Component {
 		);
 	}
 }
+
+export default CheckOutCart;
