@@ -4,3 +4,30 @@
     width: 10%;
     height:10%;
 }
+.wrapper-div{
+    height:100%;
+    border-style: solid;
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+.prof-container{
+          //display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+         // background: red;
+         border-color:red;
+}
+.prof-pict {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          border-radius: 70%;
+          padding-top:10px;
+          
+          
+          
+}

@@ -106,7 +106,43 @@ const getState = ({ getStore, setStore }) => {
 				this.props.history.push("/login");
 				setStore({ store: store });
 			},
+			registerUser(user, pass, email) {
+				const endpoint =
+					"https://word-press-project-kikelinares2003.c9users.io/wp-json/wp/v2/users/register";
+				// fetch session
 
+				fetch(endpoint, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify({
+						username: user,
+						password: pass,
+						email: email
+					})
+						.then(res => {
+							if (res.status !== 200) {
+								console.log(
+									"Connection Error, status " + res.status
+								);
+								return;
+							}
+							res.json().then(data => {
+								let store = getStore();
+								this.login(
+									data.username,
+									data.password,
+									this.process
+								);
+							});
+							this.process(this.store.session);
+						})
+						.catch(err => {
+							alert("Fetch error: ", err);
+						})
+				});
+			},
 			login: (user, pass, process) => {
 				const endpoint =
 					"https://word-press-project-kikelinares2003.c9users.io/wp-json/jwt-auth/v1/token";

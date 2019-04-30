@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext.jsx";
+//import { CheckOut } from "./views/check-out.jsx";
 
 import "../../styles/demo.css";
 
@@ -55,7 +56,8 @@ export class Cart extends React.Component {
 															<Link
 																to={
 																	"/product/" +
-																	item.ID
+																	item.product
+																		.ID
 																}>
 																{
 																	item.product
@@ -179,11 +181,11 @@ export class Cart extends React.Component {
 							</div>
 						</div>*/}
 						<div className="pull-right" style={{ margin: "10px" }}>
-							<a
-								href={"/check-out"}
+							<Link
+								to={"/check-out"}
 								className="btn btn-success pull-right">
 								Checkout
-							</a>
+							</Link>
 							<div
 								className="pull-right"
 								style={{ margin: "5px" }}>

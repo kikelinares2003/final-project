@@ -14,7 +14,6 @@ import { Product } from "./views/product.jsx";
 import { Footer } from "./component/footer.jsx";
 import { Login } from "./views/login.jsx";
 import { ProfilePage } from "./views/profile-page.jsx";
-
 import Store from "./store/appContext.jsx";
 
 //create your first component
