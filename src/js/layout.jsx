@@ -13,6 +13,7 @@ import { Blog } from "./views/blog.jsx";
 import { Product } from "./views/product.jsx";
 import { Footer } from "./component/footer.jsx";
 import { Login } from "./views/login.jsx";
+import { ProfilePage } from "./views/profile-page.jsx";
 
 import Store from "./store/appContext.jsx";
 
@@ -36,6 +37,7 @@ export class Layout extends React.Component {
 						<Route path="/videos" component={Videos} />
 						<Route path="/blog" component={Blog} />
 						<Route path="/login" component={Login} />
+						<Route path="/profile-page" component={ProfilePage} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

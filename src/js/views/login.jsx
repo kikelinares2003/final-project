@@ -16,7 +16,7 @@ export class Login extends React.Component {
 	}
 	handleSubmit = e => {
 		//e.preventDefault();
-		this.props.history.push("/home");
+		this.props.history.push("/profile-page/");
 	};
 	render() {
 		return (
@@ -79,13 +79,20 @@ export class Login extends React.Component {
 											e.preventDefault();
 											actions.login(
 												this.state.user,
-												this.state.pass
+												this.state.pass,
+												session => {
+													if (
+														store.session.isLoggedIn
+													) {
+														this.handleSubmit();
+													} else if (
+														store.session
+															.isLoggedIn == false
+													) {
+														alert("Wrong Password");
+													}
+												}
 											);
-											if (store.session.isLoggedIn) {
-												this.handleSubmit();
-											} else {
-												alert("Wrong Password");
-											}
 										}}>
 										<i className="fas fa-sign-in-alt" />{" "}
 										Sign in

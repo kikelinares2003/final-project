@@ -107,7 +107,7 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ store: store });
 			},
 
-			login: (user, pass) => {
+			login: (user, pass, process) => {
 				const endpoint =
 					"https://word-press-project-kikelinares2003.c9users.io/wp-json/jwt-auth/v1/token";
 				// fetch session
@@ -136,6 +136,7 @@ const getState = ({ getStore, setStore }) => {
 							setStore({
 								store
 							});
+							process(store.session);
 						});
 					})
 					.catch(err => {
