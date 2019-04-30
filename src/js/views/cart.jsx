@@ -52,7 +52,11 @@ export class Cart extends React.Component {
 												<div className="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
 													<h4 className="product-name">
 														<strong>
-															<Link to="/product">
+															<Link
+																to={
+																	"/product/" +
+																	item.ID
+																}>
 																{
 																	item.product
 																		.product_name
@@ -175,7 +179,9 @@ export class Cart extends React.Component {
 							</div>
 						</div>*/}
 						<div className="pull-right" style={{ margin: "10px" }}>
-							<a href="" className="btn btn-success pull-right">
+							<a
+								href={"/check-out"}
+								className="btn btn-success pull-right">
 								Checkout
 							</a>
 							<div

@@ -31,7 +31,7 @@ export class ShopCategory extends React.Component {
 							</div>
 						</Link>
 						<Link
-							to="/by-category/Engines"
+							to="/by-category/Networking"
 							className="engines col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
 								Networking
@@ -46,11 +46,6 @@ export class ShopCategory extends React.Component {
 							<div className="text-center align middle">
 								Memory
 							</div>
-						</Link>
-						<Link
-							to="/by-category/Test"
-							className="fuel col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
-							<div className="text-center align middle">Fuel</div>
 						</Link>
 						<Link
 							to="/by-category/Storage"
