@@ -62,7 +62,7 @@ export class ByCategory extends React.Component {
 											<div className="card-body text-center">
 												<Link
 													// onClick={e=>actions.}
-													to={"/product/" + prod.ID}
+													to={"/product/" + item.ID}
 													className="card-link">
 													More Information
 												</Link>
