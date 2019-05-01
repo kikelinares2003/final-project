@@ -8,6 +8,10 @@ import { Form } from "react";
 //import capeImg from "../../img/cape_inView.jpg";
 
 export class CheckOutCart extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { total: 0 };
+	}
 	render() {
 		return (
 			<React.Fragment>
@@ -18,34 +22,46 @@ export class CheckOutCart extends React.Component {
 							3
 						</span>
 					</h4>
-					<Context.Consumer>
-						<ul className="list-group mb-3">
+					<ul className="list-group mb-3">
+						<Context.Consumer>
 							{({ store, actions }) => {
 								return store.cartStore.map((item, index) => {
 									return (
-										<React.Fragment key={index}>
-											<li
-												className="list-group-item d-flex justify-content-between lh-condensed"
-												key={index}>
+										<React.Fragment key={item.product.ID}>
+											<li className="list-group-item d-flex justify-content-between lh-condensed">
 												<div>
 													<h6 className="my-0">
-														{item.post_title}
+														{
+															item.product
+																.product_name
+														}
 													</h6>
 												</div>
 												<span className="text-muted">
-													{item.post_title}
+													{item.product.price}
 												</span>
-											</li>
-											<li className="list-group-item d-flex justify-content-between">
-												<span>Total (USD)</span>
-												<strong>$20</strong>
 											</li>
 										</React.Fragment>
 									);
 								});
 							}}
-						</ul>
-					</Context.Consumer>
+						</Context.Consumer>
+						<Context.Consumer>
+							{({ store, actions }) => {
+								return (
+									<li className="list-group-item d-flex justify-content-between">
+										<span>Total (USD)</span>
+										<strong>
+											{actions.totalPrice(
+												store.cartStore
+											)}
+										</strong>
+									</li>
+								);
+							}}
+						</Context.Consumer>
+					</ul>
+
 					<form className="card p-2">
 						<div className="input-group">
 							<input
@@ -68,4 +84,4 @@ export class CheckOutCart extends React.Component {
 	}
 }
 
-//export default CheckOutCart;
+export default CheckOutCart;

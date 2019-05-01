@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { CheckOutCart } from "../component/co-cart.jsx";
 import { CheckOutForm } from "../component/co-form.jsx";
+import PropTypes from "prop-types";
 
 //import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
