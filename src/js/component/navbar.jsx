@@ -44,14 +44,7 @@ export class Navbar extends React.Component {
 							Products
 						</NavLink>
 					</li>
-					<li className="nav-item">
-						<NavLink
-							to="/blog"
-							className="header-item"
-							activeClassName="active">
-							Blog
-						</NavLink>
-					</li>
+
 					<li className="nav-item">
 						<Context.Consumer>
 							{({ store, actions }) => {

@@ -327,4 +327,4 @@ export class CheckOutForm extends React.Component {
 	}
 }
 
-export default CheckOutForm;
+//export default CheckOutForm;

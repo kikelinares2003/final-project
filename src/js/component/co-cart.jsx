@@ -18,32 +18,34 @@ export class CheckOutCart extends React.Component {
 							3
 						</span>
 					</h4>
-
-					<ul className="list-group mb-3">
-						{({ store, actions }) => {
-							return store.cartStore.map((item, index) => {
-								return (
-									<li
-										className="list-group-item d-flex justify-content-between lh-condensed"
-										key={index}>
-										<div>
-											<h6 className="my-0">
-												{item.post_title}
-											</h6>
-										</div>
-										<span className="text-muted">
-											{item.post_title}
-										</span>
-									</li>
-								);
-							});
-						}}
-						<li className="list-group-item d-flex justify-content-between">
-							<span>Total (USD)</span>
-							<strong>$20</strong>
-						</li>
-					</ul>
-
+					<Context.Consumer>
+						<ul className="list-group mb-3">
+							{({ store, actions }) => {
+								return store.cartStore.map((item, index) => {
+									return (
+										<React.Fragment key={index}>
+											<li
+												className="list-group-item d-flex justify-content-between lh-condensed"
+												key={index}>
+												<div>
+													<h6 className="my-0">
+														{item.post_title}
+													</h6>
+												</div>
+												<span className="text-muted">
+													{item.post_title}
+												</span>
+											</li>
+											<li className="list-group-item d-flex justify-content-between">
+												<span>Total (USD)</span>
+												<strong>$20</strong>
+											</li>
+										</React.Fragment>
+									);
+								});
+							}}
+						</ul>
+					</Context.Consumer>
 					<form className="card p-2">
 						<div className="input-group">
 							<input
@@ -66,4 +68,4 @@ export class CheckOutCart extends React.Component {
 	}
 }
 
-export default CheckOutCart;
+//export default CheckOutCart;
