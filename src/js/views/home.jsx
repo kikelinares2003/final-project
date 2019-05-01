@@ -16,7 +16,6 @@ export class Home extends React.Component {
 				<HomeJumbo />
 				<Specials />
 				<ShopCategory />
-				<ContactSection />
 			</div>
 		);
 	}

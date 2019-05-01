@@ -60,7 +60,7 @@ export class ProductList extends React.Component {
 														e.preventDefault();
 														actions.addToCart(item);
 													}}
-													className="card-link">
+													className="card-link text-nowrap">
 													Add to Cart{" "}
 													<i className="fas fa-cart-plus" />
 												</a>

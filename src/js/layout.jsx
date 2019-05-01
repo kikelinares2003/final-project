@@ -40,7 +40,6 @@ export class Layout extends React.Component {
 						<Route path="/profile-page" component={ProfilePage} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		);

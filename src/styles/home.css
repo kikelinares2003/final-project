@@ -1,0 +1,16 @@
+body {
+    margin-bottom: 3em;
+}
+
+.lead {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+/* product-list.jsx */
+.prod-desc {
+    height: 13em;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
