@@ -2,16 +2,6 @@
     margin-bottom: 3em;
 }
 
-/* navbar.jsx */
-.navbar {
-    color: black!important;
-    background-color: white!important;
-}
-.nav-item:last-of-type {
-    float: right!important;
-}
-
-
 .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
 
 small {

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 //style sheet
 import "../../styles/navbar.scss";
-import "../../styles/z-sitewide.css";
+import "../../styles/navbar-style.css";
 
 //navBar
 
@@ -77,7 +77,7 @@ export class Navbar extends React.Component {
 							}}
 						</Context.Consumer>
 					</li>
-					<li className="nav-item">User Name</li>
+					<li className="nav-item ml-auto">User Name</li>
 				</ul>
 			</nav>
 		);

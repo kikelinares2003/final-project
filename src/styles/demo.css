@@ -40,31 +40,28 @@
     color: #999999;
 }
 .wheels {
-    background: url('../img/shpCat-bckGrnds/wheels.png') 50% 50%;
+    background: url('../img/shpCat-bckGrnds/illuminated-server.jpg') 50% 50%;
     background-size: cover;
 }
 .ignition {
-    background: url('../img/shpCat-bckGrnds/ignition-jpg.png') 50% 50%;
+    background: url('../img/shpCat-bckGrnds/printers-scanners-laser-ink.jpg') 50% 50%;
     background-size: cover;
 }
 .engines {
-    background: url('../img/shpCat-bckGrnds/engine-turbo-rx-7.png') 50% 50%;
+    background: url('../img/shpCat-bckGrnds/networking.jpg') 50% 50%;
     background-size: cover;
 }
 .cooling {
-    background: url('../img/shpCat-bckGrnds/cooling-jpg.png') 50% 50%;
+    background: url('../img/shpCat-bckGrnds/memory.jpg') 50% 50%;
     background-size: cover;
 }
-.fuel {
-    background: url('../img/shpCat-bckGrnds/fuel-pump.png') 50% 50%;
-    background-size: cover;
-}
+
 .safety {
-    background: url('../img/shpCat-bckGrnds/Safety-jpg.png') 50% 50%;
+    background: url('../img/shpCat-bckGrnds/datastorage.jpg') 50% 50%;
     background-size: cover;
 }
 .brakes {
-    background: url('../img/shpCat-bckGrnds/brake-gallery04.png') 50% 50%;
+    background: url('../img/shpCat-bckGrnds/projectors.jpg') 50% 50%;
     background-size: cover;
 }
 .specialsCard {
