@@ -3,6 +3,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Context } from "../store/appContext.jsx";
 import PropTypes from "prop-types";
+import { History } from "react-router-dom";
 
 //include images into your bundle
 //import capeImg from "../../img/cape_inView.jpg";
@@ -28,6 +29,9 @@ export class CheckOutForm extends React.Component {
 	}
 	handlePayment = e => {
 		//process payment
+		//e.preventDefault();
+		this.props.history.push("/home/");
+		alert("Payment Submitted");
 	};
 	render() {
 		return (
@@ -377,9 +381,16 @@ export class CheckOutForm extends React.Component {
 								<hr className="mb-4" />
 
 								<button
+									onClick={e => {
+										e.preventDefault();
+										//<Link>to = {"/home/"}</Link>;
+										actions.createOrder(
+											this.state.firstName
+										);
+									}}
 									className="btn btn-primary btn-lg btn-block"
 									type="submit">
-									Continue to checkout
+									Submit Payment
 								</button>
 							</form>
 						);
@@ -391,3 +402,7 @@ export class CheckOutForm extends React.Component {
 }
 
 //export default CheckOutForm;
+
+CheckOutForm.propTypes = {
+	history: PropTypes.object
+};

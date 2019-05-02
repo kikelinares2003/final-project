@@ -19,7 +19,11 @@ export class CheckOutCart extends React.Component {
 					<h4 className="d-flex justify-content-between align-items-center mb-3">
 						<span className="text-muted">Your cart</span>
 						<span className="badge badge-secondary badge-pill">
-							3
+							<Context.Consumer>
+								{({ store, actions }) => {
+									return actions.ItemsInCart();
+								}}
+							</Context.Consumer>{" "}
 						</span>
 					</h4>
 					<hr />
@@ -39,7 +43,8 @@ export class CheckOutCart extends React.Component {
 													</h6>
 												</div>
 												<span className="text-muted">
-													{item.product.price}
+													{item.product.price} ({" "}
+													{item.qty} Items)
 												</span>
 											</li>
 										</React.Fragment>
