@@ -11,10 +11,9 @@ export class ShopCategory extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<hr className="p-3" />
-
-				<div className="container shopCategory">
+				<div className="container shopCategory pb-2">
 					<h3>Shop by Category</h3>
+					<hr />
 					<div className="row d-flex justify-content-between my-1">
 						<Link
 							to={"/by-category/Servers"}

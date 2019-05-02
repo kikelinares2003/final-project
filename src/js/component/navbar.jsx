@@ -4,8 +4,8 @@ import { Context } from "../store/appContext.jsx";
 import PropTypes from "prop-types";
 
 //style sheet
-
 import "../../styles/navbar.scss";
+import "../../styles/z-sitewide.css";
 
 //navBar
 
@@ -77,6 +77,7 @@ export class Navbar extends React.Component {
 							}}
 						</Context.Consumer>
 					</li>
+					<li className="nav-item">User Name</li>
 				</ul>
 			</nav>
 		);
