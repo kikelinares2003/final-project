@@ -32,28 +32,34 @@ export class ProfilePage extends React.Component {
 									</Row>
 									<Row>
 										<Col xs="3" className="ml-3">
-											<p className="text-primary">
+											<label className="text-primary">
 												<i className="fas fa-user">
 													{"    "}
 													{"  "}
 												</i>
-												{"  "} Name:
-											</p>
+												{"  "} Username:
+											</label>
 										</Col>
 										<Col
 											xs="6"
 											style={{ position: "left" }}>
-											<p className="text-primary">
+											<label className="text-primary">
 												{
 													store.session
 														.user_display_name
 												}
-											</p>
+											</label>
 										</Col>
 									</Row>
 									<Row>
-										<Col xs="3">Email: </Col>
-										<Col xs="3">email@address: </Col>
+										<Col xs="3" className="ml-3">
+											<label>Email:</label>{" "}
+										</Col>
+										<Col xs="6">
+											<label>
+												{store.session.user_email}
+											</label>
+										</Col>
 									</Row>
 								</div>
 							</Container>

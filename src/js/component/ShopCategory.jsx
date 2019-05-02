@@ -41,7 +41,7 @@ export class ShopCategory extends React.Component {
 
 					<div className="row d-flex justify-content-between my-1">
 						<Link
-							to="/by-category/Cooling"
+							to="/by-category/Memory"
 							className="cooling col border border-secondary rounded d-flex flex-column justify-content-center mx-1">
 							<div className="text-center align middle">
 								Memory
