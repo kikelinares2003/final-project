@@ -14,55 +14,6 @@ export class ProfilePage extends React.Component {
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return (
-<<<<<<< HEAD
-							<Container>
-								<div className="wrapper-div mt-5">
-									<Row className="mt-3">
-										<Col
-											xs={6}
-											md={4}
-											className="prof-container">
-											<img
-												className="prof-pict "
-												src={
-													"https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-												}
-												roundedCircle
-											/>
-										</Col>
-									</Row>
-									<Row>
-										<Col xs="3" className="ml-3">
-											<label className="text-primary">
-												<i className="fas fa-user">
-													{"    "}
-													{"  "}
-												</i>
-												{"  "} Username:
-											</label>
-										</Col>
-										<Col
-											xs="6"
-											style={{ position: "left" }}>
-											<label className="text-primary">
-												{
-													store.session
-														.user_display_name
-												}
-											</label>
-										</Col>
-									</Row>
-									<Row>
-										<Col xs="3" className="ml-3">
-											<label>Email:</label>{" "}
-										</Col>
-										<Col xs="6">
-											<label>
-												{store.session.user_email}
-											</label>
-										</Col>
-									</Row>
-=======
 							<div className="container">
 								<div className="row">
 									<div className="col-12 col-md-4">
@@ -93,7 +44,6 @@ export class ProfilePage extends React.Component {
 											</div>
 										</div>
 									</div>
->>>>>>> f14c61f976415b71bd3bb3eb75d89bee6160e379
 								</div>
 							</div>
 						);

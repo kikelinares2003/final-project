@@ -77,7 +77,19 @@ export class Navbar extends React.Component {
 							}}
 						</Context.Consumer>
 					</li>
-					<li className="nav-item">User Name</li>
+					<li className="nav-item">
+						<Context.Consumer>
+							{({ store, actions }) => {
+								if (store.session.isLoggedIn) {
+									return (
+										<li>
+											{store.session.user_display_name}
+										</li>
+									);
+								}
+							}}
+						</Context.Consumer>{" "}
+					</li>
 				</ul>
 			</nav>
 		);

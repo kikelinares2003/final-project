@@ -43,7 +43,8 @@ export class CheckOutCart extends React.Component {
 													</h6>
 												</div>
 												<span className="text-muted">
-													{item.product.price}
+													{item.product.price} ({" "}
+													{item.qty} Items)
 												</span>
 											</li>
 										</React.Fragment>

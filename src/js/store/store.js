@@ -198,6 +198,13 @@ const getState = ({ getStore, setStore }) => {
 				}
 				//console.log(total);
 				return total;
+			},
+			createOrder(name) {
+				const store = getStore();
+				store.checkOut.push({
+					name
+				});
+				//create the order
 			}
 			// deleteSection: index => {
 			// 	//get the store
