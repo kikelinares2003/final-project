@@ -33,6 +33,7 @@ export class CheckOutForm extends React.Component {
 		return (
 			<div className="col-md-8 order-md-1">
 				<h4 className="mb-3">Billing address</h4>
+				<hr />
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return (

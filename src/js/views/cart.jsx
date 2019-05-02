@@ -15,18 +15,17 @@ export class Cart extends React.Component {
 		return (
 			<div className="container mt-5 mb-5">
 				<div className="card shopping-cart">
-					<div className="card-header bg-primary text-light float-right ">
-						<span>
+					<div className="card-header text-light float-right ">
+						<span className="grey">
 							<i
 								className="fa fa-shopping-cart"
 								aria-hidden="true"
-								// margin-
 							/>
 						</span>
 						<Link
 							id="bttnCtxt"
 							to={"/product-list/"}
-							className="btn btn-outline-info btn-sm pull-right text-white bg-success">
+							className="btn btn-primary btn-sm pull-right">
 							Continue shopping
 						</Link>
 						<div /*className="clearfix"*/ />
@@ -183,7 +182,7 @@ export class Cart extends React.Component {
 						<div className="pull-right" style={{ margin: "10px" }}>
 							<Link
 								to={"/check-out"}
-								className="btn btn-success pull-right">
+								className="btn btn-primary pull-right">
 								Checkout
 							</Link>
 							<div

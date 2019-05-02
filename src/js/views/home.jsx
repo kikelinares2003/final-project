@@ -6,8 +6,7 @@ import { Specials } from "../component/Specials.jsx";
 import { ShopCategory } from "../component/ShopCategory.jsx";
 import ContactSection from "../component/ContactSection.jsx";
 
-//import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
+import "../../styles/z-sitewide.css";
 
 export class Home extends React.Component {
 	render() {

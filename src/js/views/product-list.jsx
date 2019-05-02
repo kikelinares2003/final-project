@@ -20,6 +20,7 @@ export class ProductList extends React.Component {
 		return (
 			<div className="container">
 				<h2 className="brand-head p-2">Product List</h2>
+				<hr />
 				<div className="row product-list">
 					<Context.Consumer>
 						{({ store, actions }) => {

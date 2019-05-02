@@ -84,7 +84,9 @@ export class Product extends React.Component {
 										</div>
 									</div>
 									<div className="col-md-7">
-										<p className="new-product">NEW</p>
+										<p className="new-product text-center">
+											NEW
+										</p>
 										<h2>{product[0].post_title}</h2>
 										<p>
 											Product ID:{" "}
@@ -117,7 +119,7 @@ export class Product extends React.Component {
 													);
 												}}
 												type="button"
-												className="btn btn-success mt-5">
+												className="btn btn-primary mt-5">
 												Add to cart
 											</button>
 										</div>

@@ -26,6 +26,7 @@ export class CheckOutCart extends React.Component {
 							</Context.Consumer>{" "}
 						</span>
 					</h4>
+					<hr />
 					<ul className="list-group mb-3">
 						<Context.Consumer>
 							{({ store, actions }) => {

@@ -5,13 +5,12 @@ import { CheckOutCart } from "../component/co-cart.jsx";
 import { CheckOutForm } from "../component/co-form.jsx";
 import PropTypes from "prop-types";
 
-//import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
+import "../../styles/z-sitewide.css";
 
 export class CheckOut extends React.Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container mt-4">
 				<div className="row">
 					<CheckOutCart />
 					<CheckOutForm />
