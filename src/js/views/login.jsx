@@ -28,25 +28,6 @@ export class Login extends React.Component {
 						Sign
 						in
 					/>
-					<div className="social-login">
-						<button
-							className="btn facebook-btn social-btn mr-1"
-							type="button">
-							<span>
-								<i className="fab fa-facebook-f" /> Sign in with
-								Facebook
-							</span>{" "}
-						</button>
-						<button
-							className="btn google-btn social-btn ml-1"
-							type="button">
-							<span>
-								<i className="fab fa-google-plus-g" /> Sign in
-								with Google+
-							</span>{" "}
-						</button>
-					</div>
-					<p style={{ textAlign: "center" }}> OR </p>
 					<input
 						onChange={e => {
 							this.setState({ user: e.target.value });
@@ -104,14 +85,6 @@ export class Login extends React.Component {
 					<a href="#" id="forgot_pswd">
 						Forgot password?
 					</a>
-					<hr />
-					{/*<p>Don't have an account!</p> */}
-					<button
-						className="btn btn-primary btn-block"
-						type="button"
-						id="btn-signup">
-						<i className="fas fa-user-plus" /> Sign up New Account
-					</button>
 				</Form>
 
 				<Form action="/reset/password/" className="form-reset">

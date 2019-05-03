@@ -19,6 +19,8 @@
 }
 
 .shopCategory > div > a > div {
+    line-height: 1em;
+    padding: 1em;
     font-size: 2em;
     font-weight: bold;
     -webkit-text-stroke: 1px black;
@@ -92,16 +94,12 @@
 #updateCart{
     margin-bottom: 15px;
 }
-
 .product-list .card{
     height: 30em;
-    
 }
-
 .product-list .card img {
     width: 100%;
     height: auto;
-   
 }
 .product-list .card-product-list .card-body .ul .prod-desc{
     height: 20em;
@@ -111,7 +109,6 @@ footer {
 }
 .footer .nav-item {
     color: #777;
-    /* padding: 0.85rem 2rem; */
 }
 
 
